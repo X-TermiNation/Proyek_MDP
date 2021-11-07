@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\Project_MDP\\project\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "D:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Russel Joshua C\\.gradle\\caches\\transforms-3\\e83c61d08e7d6a18054b889d35435de4\\transformed\\cardview-1.0.0\\res\\values\\values.xml",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "D:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\Project_MDP\\project\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "D:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "7,2,3,4,5,6,8",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -37,23 +37,6 @@
                         "startOffsets": "19541,25534,25581,25628,26372,26417,26583",
                         "endColumns": "41,46,46,46,44,44,41",
                         "endOffsets": "19578,25576,25623,25670,26412,26457,26620"
-                    }
-                },
-                {
-                    "source": "D:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\Project_MDP\\project\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "17",
-                        "endColumns": "51",
-                        "endOffsets": "64"
-                    },
-                    "to": {
-                        "startLines": "1042",
-                        "startColumns": "4",
-                        "startOffsets": "61046",
-                        "endColumns": "51",
-                        "endOffsets": "61093"
                     }
                 },
                 {
@@ -169,7 +152,7 @@
                     }
                 },
                 {
-                    "source": "D:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\Project_MDP\\project\\app\\src\\main\\res\\values\\themes.xml",
+                    "source": "D:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\src\\main\\res\\values\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -204,6 +187,23 @@
                         "endLines": "397,398,481,482,593,594,595,596,597,598,599,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,944,945,965,966,967,968,969,970,971,972,973,974,982,1010,1114,3466,3470,3471,3475,3476,4041,4042,6193,6462,6494,6537,6544",
                         "endColumns": "71,87,68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,64,58,58,59,59,59,59,59,59,59,59,59,59,58,59,59,59,59,59,59,59,59,59,59,58,59,59,58,58,58,58,58,58,34,34,54,62,54,57,56,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24",
                         "endOffsets": "19129,19217,24878,24941,32339,32407,32479,32549,32610,32684,32757,51053,51114,51176,51240,51302,51363,51431,51531,51591,51657,51730,51799,51856,51908,51970,52837,52913,52978,53037,53096,53156,53216,53276,53336,53396,53456,53516,53576,53636,53696,53755,53815,53875,53935,53995,54055,54115,54175,54235,54295,54355,54414,54474,54534,54593,54652,54711,54770,54829,54888,55315,55350,56344,56407,56462,56520,56577,56627,56688,56745,56779,56814,57196,58855,72459,229572,229773,229883,230084,230213,270549,270616,393176,421210,423275,425352,425729"
+                    }
+                },
+                {
+                    "source": "D:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endColumns": "51",
+                        "endOffsets": "64"
+                    },
+                    "to": {
+                        "startLines": "1042",
+                        "startColumns": "4",
+                        "startOffsets": "61046",
+                        "endColumns": "51",
+                        "endOffsets": "61093"
                     }
                 },
                 {

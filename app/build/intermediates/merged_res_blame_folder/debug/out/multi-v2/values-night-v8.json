@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\Project_MDP\\project\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "D:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Russel Joshua C\\.gradle\\caches\\transforms-3\\d15eef891a421cfa8ee31a95de275c6f\\transformed\\material-1.3.0\\res\\values-night-v8\\values-night-v8.xml",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "D:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\Project_MDP\\project\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "D:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
