@@ -23,16 +23,19 @@
             android:id="@+id/btn00"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="play00"
             />
         <Button
             android:id="@+id/btn01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="play01"
             />
         <Button
             android:id="@+id/btn02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="play02"
             />
         </LinearLayout>
         <LinearLayout
@@ -45,16 +48,19 @@
             android:id="@+id/btn10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="play10"
             />
         <Button
             android:id="@+id/btn11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="play11"
             />
         <Button
             android:id="@+id/btn12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="play12"
             />
         </LinearLayout>
         <LinearLayout
@@ -62,21 +68,25 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
+
             >
         <Button
             android:id="@+id/btn20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="play20"
             />
         <Button
             android:id="@+id/btn21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="play21"
             />
         <Button
             android:id="@+id/btn22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="play22"
             />
         </LinearLayout>
         <LinearLayout
@@ -89,16 +99,19 @@
             android:id="@+id/btn30"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="play30"
             />
         <Button
             android:id="@+id/btn31"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="play31"
             />
         <Button
             android:id="@+id/btn32"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="play32"
             />
         </LinearLayout>
 
