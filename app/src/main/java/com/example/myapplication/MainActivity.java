@@ -1,19 +1,30 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.myapplication.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
+    private ActivityMainBinding binding;
     private SoundPool sp;
     private int sound1,sound2,sound3,sound4,sound5,sound6,sound7,sound8,sound9,sound10,sound11,sound12;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        binding.btn00.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.blue_button));
+        binding.btn01.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.blue_button));
+        binding.btn02.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.blue_button));
+
         sp = new SoundPool(2, AudioManager.STREAM_MUSIC,0);
         sound1 = sp.load(getApplicationContext(),R.raw.sound1,1);
         sound2 = sp.load(getApplicationContext(),R.raw.sound2,1);
@@ -27,9 +38,6 @@ public class MainActivity extends AppCompatActivity {
         sound10 = sp.load(getApplicationContext(),R.raw.sound00,1);
         sound11 = sp.load(getApplicationContext(),R.raw.sound1,1);
         sound12 = sp.load(getApplicationContext(),R.raw.sound2,1);
-
-
-
     }
     public void play00(View v){
         sp.play(sound1,1.0f,1.0f,0,0,10f);

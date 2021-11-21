@@ -970,6 +970,8 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color blueend
+color bluestart
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1029,6 +1031,8 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color greenend
+color greenstart
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -1118,6 +1122,10 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color orangeend
+color orangestart
+color pinkend
+color pinkstart
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1129,6 +1137,8 @@ color primary_text_disabled_material_light
 color purple_200
 color purple_500
 color purple_700
+color purpleend
+color purplestart
 color radiobutton_themeable_attribute_color
 color ripple_material_dark
 color ripple_material_light
@@ -1627,6 +1637,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable blue_button
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1641,6 +1652,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable green_button
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -1681,6 +1693,9 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable orange_button
+drawable pink_button
+drawable purple_button
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light

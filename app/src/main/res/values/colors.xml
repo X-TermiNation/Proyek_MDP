@@ -7,4 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!--blue !-->
+    <color name="bluestart">#47f9fe</color>
+    <color name="blueend">#1295fd</color>
+    <!--orange !-->
+    <color name="orangestart">#feed64</color>
+    <color name="orangeend">#dda460</color>
+    <!--pink !-->
+    <color name="pinkstart">#fd75a5</color>
+    <color name="pinkend">#fd41a5</color>
+    <!--purple !-->
+    <color name="purplestart">#f75fe1</color>
+    <color name="purpleend">#c425ec</color>
+    <!--green !-->
+    <color name="greenstart">#b4fa51</color>
+    <color name="greenend">#78cb29</color>
 </resources>

@@ -1,10 +1,13 @@
-#Mon Nov 08 00:27:39 ICT 2021
-base.2=D\:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
-path.2=5/classes.dex
-base.1=D\:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+#Sun Nov 21 15:14:18 ICT 2021
+path.3=5/classes.dex
+path.2=2/classes.dex
 path.1=0/classes.dex
-base.0=D\:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+path.0=classes.dex
+base.3=E\:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+base.2=E\:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.1=E\:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=E\:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-path.0=classes.dex
