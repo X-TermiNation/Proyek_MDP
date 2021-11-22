@@ -23,18 +23,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         sp = new SoundPool(2, AudioManager.STREAM_MUSIC,0);
-        sound1 = sp.load(getApplicationContext(),R.raw.crash,1);
-        sound2 = sp.load(getApplicationContext(),R.raw.destroy,1);
-        sound3 = sp.load(getApplicationContext(),R.raw.gun,1);
-        sound4 = sp.load(getApplicationContext(),R.raw.hihat,1);
-        sound5 = sp.load(getApplicationContext(),R.raw.kick,1);
-        sound6 = sp.load(getApplicationContext(),R.raw.ride,1);
-        sound7 = sp.load(getApplicationContext(),R.raw.snare,1);
-        sound8 = sp.load(getApplicationContext(),R.raw.tom1,1);
-        sound9 = sp.load(getApplicationContext(),R.raw.tom2,1);
-        sound10 = sp.load(getApplicationContext(),R.raw.tom3,1);
-        sound11 = sp.load(getApplicationContext(),R.raw.sound1,1);
-        sound12 = sp.load(getApplicationContext(),R.raw.sound2,1);
+        sound1 = sp.load(getApplicationContext(),R.raw.key01,1);
+        sound2 = sp.load(getApplicationContext(),R.raw.key02,1);
+        sound3 = sp.load(getApplicationContext(),R.raw.key03,1);
+        sound4 = sp.load(getApplicationContext(),R.raw.key04,1);
+        sound5 = sp.load(getApplicationContext(),R.raw.key05,1);
+        sound6 = sp.load(getApplicationContext(),R.raw.key06,1);
+        sound7 = sp.load(getApplicationContext(),R.raw.key07,1);
+        sound8 = sp.load(getApplicationContext(),R.raw.key08,1);
+        sound9 = sp.load(getApplicationContext(),R.raw.key09,1);
+        sound10 = sp.load(getApplicationContext(),R.raw.key10,1);
+        sound11 = sp.load(getApplicationContext(),R.raw.key11,1);
+        sound12 = sp.load(getApplicationContext(),R.raw.key12,1);
     }
     public void play00(View v){
         sp.play(sound1,1.0f,1.0f,0,0,10f);
