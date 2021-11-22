@@ -12,16 +12,28 @@
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_hihat.mp3.flat",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\hihat.mp3"
+    },
+    {
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_tom2.mp3.flat",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\tom2.mp3"
     },
     {
         "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_orange_button.xml.flat",
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\drawable-v24\\orange_button.xml"
     },
     {
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
         "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_sound6.wav.flat",
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\sound6.wav"
+    },
+    {
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_crash.mp3.flat",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\crash.mp3"
     },
     {
         "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_green_button.xml.flat",
@@ -48,6 +60,10 @@
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_kick.mp3.flat",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\kick.mp3"
+    },
+    {
         "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
@@ -64,6 +80,10 @@
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_tom3.mp3.flat",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\tom3.mp3"
+    },
+    {
         "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\drawable_blue_button.xml.flat",
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\drawable\\blue_button.xml"
     },
@@ -74,6 +94,10 @@
     {
         "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_sound9.wav.flat",
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\sound9.wav"
+    },
+    {
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_tom1.mp3.flat",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\tom1.mp3"
     },
     {
         "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -92,6 +116,10 @@
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_ride.mp3.flat",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\ride.mp3"
+    },
+    {
         "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
@@ -104,6 +132,10 @@
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_gun.wav.flat",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\gun.wav"
+    },
+    {
         "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_pink_button.xml.flat",
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\drawable-v24\\pink_button.xml"
     },
@@ -112,8 +144,16 @@
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_destroy.wav.flat",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\destroy.wav"
+    },
+    {
         "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_sound7.wav.flat",
         "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\sound7.wav"
+    },
+    {
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_snare.mp3.flat",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\raw\\snare.mp3"
     },
     {
         "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_sound2.wav.flat",

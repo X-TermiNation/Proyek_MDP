@@ -2267,6 +2267,13 @@ layout text_view_without_line_height
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw crash
+raw destroy
+raw gun
+raw hihat
+raw kick
+raw ride
+raw snare
 raw sound00
 raw sound1
 raw sound2
@@ -2277,6 +2284,9 @@ raw sound6
 raw sound7
 raw sound8
 raw sound9
+raw tom1
+raw tom2
+raw tom3
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

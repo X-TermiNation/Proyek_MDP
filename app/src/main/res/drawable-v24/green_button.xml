@@ -6,7 +6,7 @@
                   android:endColor="@color/greenend"
                   android:type="radial"
                   android:angle="120"
-            android:gradientRadius="100dp"/>
+            android:gradientRadius="50dp"/>
         <corners android:radius="30dp"/>
     </shape>
 </item>

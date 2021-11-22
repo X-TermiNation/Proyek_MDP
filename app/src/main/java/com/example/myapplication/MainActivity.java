@@ -11,6 +11,7 @@ import android.view.View;
 import com.example.myapplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+
     private ActivityMainBinding binding;
     private SoundPool sp;
     private int sound1,sound2,sound3,sound4,sound5,sound6,sound7,sound8,sound9,sound10,sound11,sound12;
@@ -21,21 +22,17 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.btn00.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.blue_button));
-        binding.btn01.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.blue_button));
-        binding.btn02.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.blue_button));
-
         sp = new SoundPool(2, AudioManager.STREAM_MUSIC,0);
-        sound1 = sp.load(getApplicationContext(),R.raw.sound1,1);
-        sound2 = sp.load(getApplicationContext(),R.raw.sound2,1);
-        sound3 = sp.load(getApplicationContext(),R.raw.sound3,1);
-        sound4 = sp.load(getApplicationContext(),R.raw.sound4,1);
-        sound5 = sp.load(getApplicationContext(),R.raw.sound5,1);
-        sound6 = sp.load(getApplicationContext(),R.raw.sound6,1);
-        sound7 = sp.load(getApplicationContext(),R.raw.sound7,1);
-        sound8 = sp.load(getApplicationContext(),R.raw.sound8,1);
-        sound9 = sp.load(getApplicationContext(),R.raw.sound9,1);
-        sound10 = sp.load(getApplicationContext(),R.raw.sound00,1);
+        sound1 = sp.load(getApplicationContext(),R.raw.crash,1);
+        sound2 = sp.load(getApplicationContext(),R.raw.destroy,1);
+        sound3 = sp.load(getApplicationContext(),R.raw.gun,1);
+        sound4 = sp.load(getApplicationContext(),R.raw.hihat,1);
+        sound5 = sp.load(getApplicationContext(),R.raw.kick,1);
+        sound6 = sp.load(getApplicationContext(),R.raw.ride,1);
+        sound7 = sp.load(getApplicationContext(),R.raw.snare,1);
+        sound8 = sp.load(getApplicationContext(),R.raw.tom1,1);
+        sound9 = sp.load(getApplicationContext(),R.raw.tom2,1);
+        sound10 = sp.load(getApplicationContext(),R.raw.tom3,1);
         sound11 = sp.load(getApplicationContext(),R.raw.sound1,1);
         sound12 = sp.load(getApplicationContext(),R.raw.sound2,1);
     }
