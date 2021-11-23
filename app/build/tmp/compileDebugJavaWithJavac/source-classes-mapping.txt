@@ -4,3 +4,8 @@ com/example/myapplication/databinding/ActivityMainBinding.java
  com.example.myapplication.databinding.ActivityMainBinding
 com/example/myapplication/MainActivity.java
  com.example.myapplication.MainActivity
+com/example/myapplication/databinding/ActivityLoginBinding.java
+ com.example.myapplication.databinding.ActivityLoginBinding
+com/example/myapplication/LoginActivity.java
+ com.example.myapplication.LoginActivity
+ com.example.myapplication.LoginActivity$1

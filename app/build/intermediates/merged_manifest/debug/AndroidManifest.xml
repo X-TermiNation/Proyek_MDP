@@ -20,6 +20,9 @@
         android:theme="@style/Theme.MyApplication" >
         <activity
             android:name="com.example.myapplication.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.myapplication.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

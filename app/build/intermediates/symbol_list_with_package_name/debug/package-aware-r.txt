@@ -1637,6 +1637,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bgimage
 drawable blue_button
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -1862,6 +1863,7 @@ id easeInOut
 id easeOut
 id edit_query
 id elastic
+id email
 id end
 id endToStart
 id enterAlways
@@ -1917,6 +1919,7 @@ id line3
 id linear
 id listMode
 id list_item
+id log
 id masked
 id material_clock_display
 id material_clock_face
@@ -1981,6 +1984,7 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id one
 id outline
 id outward
 id packed
@@ -1989,6 +1993,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id password
 id password_toggle
 id path
 id pathRelative
@@ -2181,6 +2186,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_login
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
