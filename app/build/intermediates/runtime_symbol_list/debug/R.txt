@@ -1973,6 +1973,7 @@ int id mtrl_picker_text_input_range_start 0x7f08010e
 int id mtrl_picker_title_text 0x7f08010f
 int id mtrl_view_tag_bottom_padding 0x7f080110
 int id multiply 0x7f080111
+int id nama 0x7f0801ac
 int id navigation_header_container 0x7f080112
 int id never 0x7f080113
 int id noScroll 0x7f080114
@@ -1992,6 +1993,7 @@ int id parent 0x7f080121
 int id parentPanel 0x7f080122
 int id parentRelative 0x7f080123
 int id parent_matrix 0x7f080124
+int id passconf 0x7f0801aa
 int id password 0x7f080125
 int id password_toggle 0x7f080126
 int id path 0x7f080127
@@ -2006,6 +2008,7 @@ int id progress_horizontal 0x7f08012f
 int id radio 0x7f080130
 int id ratio 0x7f080131
 int id rectangles 0x7f080132
+int id reg 0x7f0801ad
 int id reverseSawtooth 0x7f080133
 int id right 0x7f080134
 int id rightToLeft 0x7f080135
@@ -2101,6 +2104,8 @@ int id time 0x7f08018e
 int id title 0x7f08018f
 int id titleDividerNoCustom 0x7f080190
 int id title_template 0x7f080191
+int id toLog 0x7f0801ae
+int id toReg 0x7f0801ab
 int id toggle 0x7f080192
 int id top 0x7f080193
 int id topPanel 0x7f080194
@@ -2187,6 +2192,7 @@ int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_login 0x7f0b001c
 int layout activity_main 0x7f0b001d
+int layout activity_register 0x7f0b0070
 int layout custom_dialog 0x7f0b001e
 int layout design_bottom_navigation_item 0x7f0b001f
 int layout design_bottom_sheet_dialog 0x7f0b0020
@@ -2332,6 +2338,7 @@ int string character_counter_overflowed_content_description 0x7f0f0020
 int string character_counter_pattern 0x7f0f0021
 int string chip_text 0x7f0f0022
 int string clear_text_end_icon_content_description 0x7f0f0023
+int string click_me 0x7f0f0064
 int string error_icon_content_description 0x7f0f0024
 int string exposed_dropdown_menu_content_description 0x7f0f0025
 int string fab_transformation_scrim_behavior 0x7f0f0026

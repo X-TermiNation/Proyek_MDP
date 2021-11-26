@@ -11,7 +11,7 @@
 9-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:5:5-24:19
+11-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:5:5-27:19
 12        android:allowBackup="true"
 12-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -29,28 +29,43 @@
 20        android:theme="@style/Theme.MyApplication" >
 20-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:11:9-51
 21        <activity
-21-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:12:9-14:40
-22            android:name="com.example.myapplication.MainActivity"
-22-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:13:13-41
-23            android:exported="false" />
-23-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:14:13-37
+21-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:12:9-14:39
+22            android:name="com.example.myapplication.RegisterActivity"
+22-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:13:13-45
+23            android:exported="true" />
+23-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:14:13-36
 24        <activity
-24-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:15:9-23:20
-25            android:name="com.example.myapplication.LoginActivity"
-25-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:16:13-42
-26            android:exported="true" >
-26-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:17:13-36
-27            <intent-filter>
-27-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:18:13-22:29
-28                <action android:name="android.intent.action.MAIN" />
-28-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:19:17-69
-28-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:19:25-66
-29
-30                <category android:name="android.intent.category.LAUNCHER" />
-30-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:21:17-77
-30-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:21:27-74
-31            </intent-filter>
-32        </activity>
-33    </application>
-34
-35</manifest>
+24-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:15:9-17:40
+25            android:name="com.example.myapplication.MainActivity"
+25-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:16:13-41
+26            android:exported="false" />
+26-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:17:13-37
+27        <activity
+27-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:18:9-26:20
+28            android:name="com.example.myapplication.LoginActivity"
+28-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:19:13-42
+29            android:exported="true" >
+29-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:20:13-36
+30            <intent-filter>
+30-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:21:13-25:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:22:17-69
+31-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:22:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:24:17-77
+33-->C:\Users\JohnCS\Documents\GitHub\Proyek_MDP\app\src\main\AndroidManifest.xml:24:27-74
+34            </intent-filter>
+35        </activity>
+36
+37        <service
+37-->[androidx.room:room-runtime:2.3.0] C:\Users\JohnCS\.gradle\caches\transforms-3\114c27d1ecdc2eb438c615ae608545f5\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+38            android:name="androidx.room.MultiInstanceInvalidationService"
+38-->[androidx.room:room-runtime:2.3.0] C:\Users\JohnCS\.gradle\caches\transforms-3\114c27d1ecdc2eb438c615ae608545f5\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+39            android:directBootAware="true"
+39-->[androidx.room:room-runtime:2.3.0] C:\Users\JohnCS\.gradle\caches\transforms-3\114c27d1ecdc2eb438c615ae608545f5\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+40            android:exported="false" />
+40-->[androidx.room:room-runtime:2.3.0] C:\Users\JohnCS\.gradle\caches\transforms-3\114c27d1ecdc2eb438c615ae608545f5\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+41    </application>
+42
+43</manifest>

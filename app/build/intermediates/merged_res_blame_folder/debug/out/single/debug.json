@@ -128,6 +128,10 @@
         "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
         "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_key05.mp3.flat",
         "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\raw\\key05.mp3"
     },
@@ -144,12 +148,12 @@
         "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\raw\\key11.mp3"
     },
     {
-        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_key24.mp3.flat",
-        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\raw\\key24.mp3"
-    },
-    {
         "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_key24.mp3.flat",
+        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\raw\\key24.mp3"
     },
     {
         "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_key22.mp3.flat",

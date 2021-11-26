@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.myapplication.databinding.ActivityLoginBinding;
 import com.example.myapplication.databinding.ActivityMainBinding;
@@ -27,15 +29,70 @@ public class LoginActivity extends AppCompatActivity {
         bind = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(bind.getRoot());
         bind.one.animate().alpha(1.0f).setDuration(5000);
+        bind.toReg.setPaintFlags(bind.toReg.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         bind.log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(i);
+                String email = bind.email.getText().toString();
+                String password = bind.password.getText().toString();
+                if(email.length() > 0 && password.length() > 0)
+                {
+                    new LoginSync(email, password, getApplicationContext(), new LoginSync.loginCallback() {
+                        @Override
+                        public void preExecute() {
+
+                        }
+
+                        @Override
+                        public void postExecute(List<User> listUser) {
+                            boolean isFound = false;
+                            for(User data: listUser)
+                            {
+                                if(data.getEmail().equals(email))
+                                {
+                                    isFound = true;
+                                    if(data.getPassword().equals(password))
+                                    {
+                                        Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                                        i.putExtra("loggedUser", data);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                    else
+                                    {
+                                        makeText("Password salah");
+                                    }
+                                }
+                            }
+
+                            if(!isFound)
+                            {
+                                makeText("User tidak ditemukan");
+                            }
+                        }
+                    }).execute();
+                }
+                else
+                {
+                    makeText("Data tidak boleh kosong");
+                }
+
+
             }
         });
 
-
+        bind.toReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+    }
+    public void makeText(String message)
+    {
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 }
 
@@ -50,7 +107,8 @@ class LoginSync{
         this.weakContext = new WeakReference<>(context);
         this.weakCallback = new WeakReference<>(callback);
     }
-    Boolean IsFound = false;
+    Boolean isFound = false;
+    Boolean isLogged = false;
     void execute(){
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         Handler handler = new Handler(Looper.getMainLooper());
@@ -62,25 +120,12 @@ class LoginSync{
                 UserDatabase userDatabase = UserDatabase.getUserDatabase(context);
                 List<User> listUser;
                 listUser = userDatabase.userDao().gettAllUser();
-                for (int i = 0; i < listUser.size(); i++) {
-                    if(Username.equals(listUser.get(i).getEmail())){
-                        if(password.equals(listUser.get(i).getPassword())){
-                            IsFound = true;
-                        }
-                    }
-                }
-                if(IsFound){
-                    handler.post(()->{
-                        String succesMessage ="Login Berhasil";
-                        weakCallback.get().postExecute(succesMessage);
-                    });
-                    IsFound = false;
-                }else{
-                    handler.post(()->{
-                        String succesMessage ="Login Gagal";
-                        weakCallback.get().postExecute(succesMessage);
-                    });
-                }
+
+                handler.post(()->{
+                    String succesMessage ="Login Gagal";
+                    weakCallback.get().postExecute(listUser);
+                });
+
 
             }
         });
@@ -89,6 +134,6 @@ class LoginSync{
 
     interface loginCallback{
         void preExecute();
-        void postExecute(String message);
+        void postExecute(List<User> listUser);
     }
 }

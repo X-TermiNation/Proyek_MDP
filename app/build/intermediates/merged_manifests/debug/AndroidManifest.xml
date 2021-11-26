@@ -19,6 +19,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyApplication" >
         <activity
+            android:name="com.example.myapplication.RegisterActivity"
+            android:exported="true" />
+        <activity
             android:name="com.example.myapplication.MainActivity"
             android:exported="false" />
         <activity
@@ -30,6 +33,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
     </application>
 
 </manifest>

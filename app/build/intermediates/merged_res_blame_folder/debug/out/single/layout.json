@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
+        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
         "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
         "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_login.xml"
     },

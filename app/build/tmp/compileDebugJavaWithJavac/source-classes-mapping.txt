@@ -1,11 +1,33 @@
+com/example/myapplication/User.java
+ com.example.myapplication.User
+ com.example.myapplication.User$1
+com/example/myapplication/UserDao.java
+ com.example.myapplication.UserDao
 com/example/myapplication/BuildConfig.java
  com.example.myapplication.BuildConfig
+com/example/myapplication/UserDatabase.java
+ com.example.myapplication.UserDatabase
+com/example/myapplication/databinding/ActivityRegisterBinding.java
+ com.example.myapplication.databinding.ActivityRegisterBinding
 com/example/myapplication/databinding/ActivityMainBinding.java
  com.example.myapplication.databinding.ActivityMainBinding
 com/example/myapplication/MainActivity.java
  com.example.myapplication.MainActivity
 com/example/myapplication/databinding/ActivityLoginBinding.java
  com.example.myapplication.databinding.ActivityLoginBinding
+com/example/myapplication/RegisterActivity.java
+ com.example.myapplication.AddUserSync
+ com.example.myapplication.AddUserSync$1
+ com.example.myapplication.AddUserSync$AddUpdateNoteCallback
+ com.example.myapplication.RegisterActivity
+ com.example.myapplication.RegisterActivity$1
+ com.example.myapplication.RegisterActivity$2
+ com.example.myapplication.RegisterActivity$2$1
 com/example/myapplication/LoginActivity.java
  com.example.myapplication.LoginActivity
  com.example.myapplication.LoginActivity$1
+ com.example.myapplication.LoginActivity$1$1
+ com.example.myapplication.LoginActivity$2
+ com.example.myapplication.LoginSync
+ com.example.myapplication.LoginSync$1
+ com.example.myapplication.LoginSync$loginCallback

@@ -1974,6 +1974,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nama
 id navigation_header_container
 id never
 id noScroll
@@ -1993,6 +1994,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id passconf
 id password
 id password_toggle
 id path
@@ -2007,6 +2009,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id reg
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2102,6 +2105,8 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id toLog
+id toReg
 id toggle
 id top
 id topPanel
@@ -2188,6 +2193,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
 layout activity_main
+layout activity_register
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2333,6 +2339,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string click_me
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
