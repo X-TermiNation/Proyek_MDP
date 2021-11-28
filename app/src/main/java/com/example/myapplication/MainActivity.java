@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private SoundPool sp;
+    Intent intent;
     private int sound1,sound2,sound3,sound4,sound5,sound6,sound7,sound8,sound9,sound10,sound11,sound12;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,19 +24,20 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        intent=getIntent();
         sp = new SoundPool(2, AudioManager.STREAM_MUSIC,0);
-        sound1 = sp.load(getApplicationContext(),R.raw.key01,1);
-        sound2 = sp.load(getApplicationContext(),R.raw.key02,1);
-        sound3 = sp.load(getApplicationContext(),R.raw.key03,1);
-        sound4 = sp.load(getApplicationContext(),R.raw.key04,1);
-        sound5 = sp.load(getApplicationContext(),R.raw.key05,1);
-        sound6 = sp.load(getApplicationContext(),R.raw.key06,1);
-        sound7 = sp.load(getApplicationContext(),R.raw.key07,1);
-        sound8 = sp.load(getApplicationContext(),R.raw.key08,1);
-        sound9 = sp.load(getApplicationContext(),R.raw.key09,1);
-        sound10 = sp.load(getApplicationContext(),R.raw.key10,1);
-        sound11 = sp.load(getApplicationContext(),R.raw.key11,1);
-        sound12 = sp.load(getApplicationContext(),R.raw.key12,1);
+        sound1 = sp.load(getApplicationContext(),intent.getIntExtra("sound1",0),1);
+        sound2 = sp.load(getApplicationContext(),intent.getIntExtra("sound2",0),1);
+        sound3 = sp.load(getApplicationContext(),intent.getIntExtra("sound3",0),1);
+        sound4 = sp.load(getApplicationContext(),intent.getIntExtra("sound4",0),1);
+        sound5 = sp.load(getApplicationContext(),intent.getIntExtra("sound5",0),1);
+        sound6 = sp.load(getApplicationContext(),intent.getIntExtra("sound6",0),1);
+        sound7 = sp.load(getApplicationContext(),intent.getIntExtra("sound7",0),1);
+        sound8 = sp.load(getApplicationContext(),intent.getIntExtra("sound8",0),1);
+        sound9 = sp.load(getApplicationContext(),intent.getIntExtra("sound9",0),1);
+        sound10 = sp.load(getApplicationContext(),intent.getIntExtra("sound10",0),1);
+        sound11 = sp.load(getApplicationContext(),intent.getIntExtra("sound11",0),1);
+        sound12 = sp.load(getApplicationContext(),intent.getIntExtra("sound12",0),1);
     }
     public void play00(View v){
         sp.play(sound1,1.0f,1.0f,0,0,10f);

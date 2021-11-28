@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                                     isFound = true;
                                     if(data.getPassword().equals(password))
                                     {
-                                        Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                                        Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                                         i.putExtra("loggedUser", data);
                                         startActivity(i);
                                         finish();

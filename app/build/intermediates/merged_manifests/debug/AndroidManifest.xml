@@ -19,6 +19,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyApplication" >
         <activity
+            android:name="com.example.myapplication.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.myapplication.RegisterActivity"
             android:exported="true" />
         <activity
