@@ -11,8 +11,8 @@ com/example/myapplication/LoginActivity.java
  com.example.myapplication.LoginSync
  com.example.myapplication.LoginSync$1
  com.example.myapplication.LoginSync$loginCallback
-com/example/myapplication/databinding/ActivityHomeBinding.java
- com.example.myapplication.databinding.ActivityHomeBinding
+com/example/myapplication/HomeFragment.java
+ com.example.myapplication.HomeFragment
 com/example/myapplication/databinding/LayoutMusicBinding.java
  com.example.myapplication.databinding.LayoutMusicBinding
 com/example/myapplication/databinding/ActivityRegisterBinding.java
@@ -43,11 +43,11 @@ com/example/myapplication/databinding/ActivityLoginBinding.java
  com.example.myapplication.databinding.ActivityLoginBinding
 com/example/myapplication/databinding/FragmentHomeBinding.java
  com.example.myapplication.databinding.FragmentHomeBinding
-com/example/myapplication/User.java
- com.example.myapplication.User
- com.example.myapplication.User$1
-com/example/myapplication/HomeFragment.java
- com.example.myapplication.HomeFragment
 com/example/myapplication/HomeActivity.java
  com.example.myapplication.HomeActivity
  com.example.myapplication.HomeActivity$1
+com/example/myapplication/User.java
+ com.example.myapplication.User
+ com.example.myapplication.User$1
+com/example/myapplication/databinding/ActivityHomeBinding.java
+ com.example.myapplication.databinding.ActivityHomeBinding

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User1\\.gradle\\caches\\transforms-3\\20a17e71544c4e7bb3fb65a7d7b86673\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Tan\\.gradle\\caches\\transforms-3\\20a17e71544c4e7bb3fb65a7d7b86673\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\User1\\.gradle\\caches\\transforms-3\\3109fa55ae143c0f8f7eeab21d745e0d\\transformed\\appcompat-1.2.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Tan\\.gradle\\caches\\transforms-3\\3109fa55ae143c0f8f7eeab21d745e0d\\transformed\\appcompat-1.2.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
