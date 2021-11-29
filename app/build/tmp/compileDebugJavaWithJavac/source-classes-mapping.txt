@@ -3,14 +3,9 @@ com/example/myapplication/music.java
  com.example.myapplication.music$1
 com/example/myapplication/MainActivity.java
  com.example.myapplication.MainActivity
-com/example/myapplication/LoginActivity.java
- com.example.myapplication.LoginActivity
- com.example.myapplication.LoginActivity$1
- com.example.myapplication.LoginActivity$1$1
- com.example.myapplication.LoginActivity$2
- com.example.myapplication.LoginSync
- com.example.myapplication.LoginSync$1
- com.example.myapplication.LoginSync$loginCallback
+com/example/myapplication/User.java
+ com.example.myapplication.User
+ com.example.myapplication.User$1
 com/example/myapplication/HomeFragment.java
  com.example.myapplication.HomeFragment
 com/example/myapplication/databinding/LayoutMusicBinding.java
@@ -23,14 +18,8 @@ com/example/myapplication/musicAdapter.java
  com.example.myapplication.musicAdapter$OnItemClickCallback
  com.example.myapplication.musicAdapter$ViewHolder
  com.example.myapplication.musicAdapter$ViewHolder$1
-com/example/myapplication/RegisterActivity.java
- com.example.myapplication.AddUserSync
- com.example.myapplication.AddUserSync$1
- com.example.myapplication.AddUserSync$AddUpdateNoteCallback
- com.example.myapplication.RegisterActivity
- com.example.myapplication.RegisterActivity$1
- com.example.myapplication.RegisterActivity$2
- com.example.myapplication.RegisterActivity$2$1
+com/example/myapplication/databinding/ActivityHomeBinding.java
+ com.example.myapplication.databinding.ActivityHomeBinding
 com/example/myapplication/UserDao.java
  com.example.myapplication.UserDao
 com/example/myapplication/BuildConfig.java
@@ -46,8 +35,22 @@ com/example/myapplication/databinding/FragmentHomeBinding.java
 com/example/myapplication/HomeActivity.java
  com.example.myapplication.HomeActivity
  com.example.myapplication.HomeActivity$1
-com/example/myapplication/User.java
- com.example.myapplication.User
- com.example.myapplication.User$1
-com/example/myapplication/databinding/ActivityHomeBinding.java
- com.example.myapplication.databinding.ActivityHomeBinding
+com/example/myapplication/RegisterActivity.java
+ com.example.myapplication.AddUserSync
+ com.example.myapplication.AddUserSync$1
+ com.example.myapplication.AddUserSync$AddUpdateNoteCallback
+ com.example.myapplication.RegisterActivity
+ com.example.myapplication.RegisterActivity$1
+ com.example.myapplication.RegisterActivity$2
+ com.example.myapplication.RegisterActivity$2$1
+ com.example.myapplication.RegisterActivity$3
+ com.example.myapplication.RegisterActivity$4
+ com.example.myapplication.RegisterActivity$5
+com/example/myapplication/LoginActivity.java
+ com.example.myapplication.LoginActivity
+ com.example.myapplication.LoginActivity$1
+ com.example.myapplication.LoginActivity$1$1
+ com.example.myapplication.LoginActivity$2
+ com.example.myapplication.LoginSync
+ com.example.myapplication.LoginSync$1
+ com.example.myapplication.LoginSync$loginCallback

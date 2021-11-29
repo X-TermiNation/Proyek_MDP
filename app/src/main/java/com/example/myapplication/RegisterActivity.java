@@ -11,15 +11,27 @@ import android.os.Looper;
 import android.view.View;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.myapplication.databinding.ActivityRegisterBinding;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
     private ActivityRegisterBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
                     if(pass.equals(passconf))
                     {
                         User user = new User(name, email, pass);
+                        insertmySQL(name,email,pass);
                         new AddUserSync(user, getApplicationContext(), new AddUserSync.AddUpdateNoteCallback() {
                             @Override
                             public void preExecute() {
@@ -60,6 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 makeText(message);
                             }
                         }).execute();
+
                     }
                     else
                     {
@@ -74,7 +88,42 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+    public void insertmySQL(String name,String email,String pass){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                "http://localhost/myapi/insert.php"
+                , new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    String success = jsonObject.getString("success");
+                    if(success.equals("1")){
+                        System.out.println("Register Berhasil");
+                    }else{
+                        System.out.println("gagal");
+                    }
+                }catch (JSONException e){
+                    System.out.println("gagal");
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
 
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams()  {
+                Map<String,String>parms=new HashMap<String, String>();
+                parms.put("name",name);
+                parms.put("email",email);
+                parms.put("password",pass);
+                return parms;
+            }
+        };
+        RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
+        requestQueue.add(stringRequest);
+    }
     public void makeText(String message)
     {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();

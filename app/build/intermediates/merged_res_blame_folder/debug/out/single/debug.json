@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\raw\\hihat.mp3"
     },
     {
-        "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_green_button.xml.flat",
-        "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\drawable-v24\\green_button.xml"
-    },
-    {
         "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_mode_comment_24.xml.flat",
         "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\drawable\\ic_baseline_mode_comment_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_green_button.xml.flat",
+        "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\drawable-v24\\green_button.xml"
     },
     {
         "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_music_note_24.xml.flat",
@@ -40,12 +40,12 @@
         "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\drawable\\blue_button.xml"
     },
     {
-        "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_tom3.mp3.flat",
         "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\raw\\tom3.mp3"
+    },
+    {
+        "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_key02.mp3.flat",
@@ -56,12 +56,12 @@
         "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\raw\\key09.mp3"
     },
     {
-        "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_destroy.wav.flat",
         "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\raw\\destroy.wav"
+    },
+    {
+        "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_favorite_24.xml.flat",
@@ -108,12 +108,12 @@
         "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\raw\\key08.mp3"
     },
     {
-        "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_crash.mp3.flat",
         "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\raw\\crash.mp3"
+    },
+    {
+        "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_home.xml.flat",
@@ -184,12 +184,12 @@
         "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\drawable-v24\\orange_button.xml"
     },
     {
-        "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\menu_bottomnav.xml.flat",
-        "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\menu\\bottomnav.xml"
-    },
-    {
         "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_ride.mp3.flat",
         "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\raw\\ride.mp3"
+    },
+    {
+        "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\menu_bottomnav.xml.flat",
+        "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\menu\\bottomnav.xml"
     },
     {
         "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\raw_gun.wav.flat",
