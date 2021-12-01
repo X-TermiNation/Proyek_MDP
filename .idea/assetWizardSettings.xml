@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/music_note/baseline_music_note_24.xml" />
+                                      <entry key="url" value="file:/C:/Users/Russel%20Joshua%20C/AppData/Local/Android/Sdk/icons/material/materialicons/favorite/baseline_favorite_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,7 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_baseline_music_note_24" />
+                            <entry key="color" value="ff0000" />
+                            <entry key="outputName" value="ic_baseline_favorite_23" />
                             <entry key="sourceFile" value="E:\Github data\Proyek_MDP" />
                           </map>
                         </option>

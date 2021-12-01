@@ -10,12 +10,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.databinding.LayoutMusicBinding;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class musicAdapter extends RecyclerView.Adapter<musicAdapter.ViewHolder> {
 
     Intent intent;
     private ArrayList<music> listmusic;
     private OnItemClickCallback onItemClickCallback;
+    Boolean cekfav [] = new Boolean[100];
 
     public musicAdapter(ArrayList<music> listmusic) {
         this.listmusic = listmusic;
@@ -76,6 +78,19 @@ public class musicAdapter extends RecyclerView.Adapter<musicAdapter.ViewHolder> 
                     intent.putExtra("sound12", music.getSound12());
                     v.getContext().startActivity(intent);
 
+                }
+            });
+            Arrays.fill(cekfav,Boolean.FALSE);
+            binding.btnfavorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (cekfav[0]==false){
+                        binding.btnfavorite.setImageResource(R.drawable.ic_baseline_favorite2_24);
+                        cekfav[0]=true;
+                    }else{
+                        binding.btnfavorite.setImageResource(R.drawable.ic_baseline_favorite_24);
+                        cekfav[0]=false;
+                    }
                 }
             });
         }

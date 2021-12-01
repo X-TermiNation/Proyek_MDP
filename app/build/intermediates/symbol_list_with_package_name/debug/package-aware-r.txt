@@ -1703,6 +1703,7 @@ drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable green_button
+drawable ic_baseline_favorite2_24
 drawable ic_baseline_favorite_24
 drawable ic_baseline_mode_comment_24
 drawable ic_baseline_music_note_24
