@@ -2075,12 +2075,14 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id play
 id position
 id postLayout
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id recordbtn
 id rectangles
 id reg
 id reverseSawtooth
@@ -2177,6 +2179,7 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
+id timer
 id title
 id titleDividerNoCustom
 id title_template

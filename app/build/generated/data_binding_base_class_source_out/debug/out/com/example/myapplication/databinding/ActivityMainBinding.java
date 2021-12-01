@@ -4,7 +4,9 @@ package com.example.myapplication.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
@@ -55,13 +57,23 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final AppCompatButton btn32;
 
+  @NonNull
+  public final Button play;
+
+  @NonNull
+  public final Button recordbtn;
+
+  @NonNull
+  public final TextView timer;
+
   private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull AppCompatButton btn00,
       @NonNull AppCompatButton btn01, @NonNull AppCompatButton btn02,
       @NonNull AppCompatButton btn10, @NonNull AppCompatButton btn11,
       @NonNull AppCompatButton btn12, @NonNull AppCompatButton btn20,
       @NonNull AppCompatButton btn21, @NonNull AppCompatButton btn22,
       @NonNull AppCompatButton btn30, @NonNull AppCompatButton btn31,
-      @NonNull AppCompatButton btn32) {
+      @NonNull AppCompatButton btn32, @NonNull Button play, @NonNull Button recordbtn,
+      @NonNull TextView timer) {
     this.rootView = rootView;
     this.btn00 = btn00;
     this.btn01 = btn01;
@@ -75,6 +87,9 @@ public final class ActivityMainBinding implements ViewBinding {
     this.btn30 = btn30;
     this.btn31 = btn31;
     this.btn32 = btn32;
+    this.play = play;
+    this.recordbtn = recordbtn;
+    this.timer = timer;
   }
 
   @Override
@@ -176,8 +191,26 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.play;
+      Button play = ViewBindings.findChildViewById(rootView, id);
+      if (play == null) {
+        break missingId;
+      }
+
+      id = R.id.recordbtn;
+      Button recordbtn = ViewBindings.findChildViewById(rootView, id);
+      if (recordbtn == null) {
+        break missingId;
+      }
+
+      id = R.id.timer;
+      TextView timer = ViewBindings.findChildViewById(rootView, id);
+      if (timer == null) {
+        break missingId;
+      }
+
       return new ActivityMainBinding((LinearLayout) rootView, btn00, btn01, btn02, btn10, btn11,
-          btn12, btn20, btn21, btn22, btn30, btn31, btn32);
+          btn12, btn20, btn21, btn22, btn30, btn31, btn32, play, recordbtn, timer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

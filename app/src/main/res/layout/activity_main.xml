@@ -10,7 +10,21 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="56dp" />
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/timer"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Record"
+        android:id="@+id/recordbtn"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="play"
+        android:id="@+id/play"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
