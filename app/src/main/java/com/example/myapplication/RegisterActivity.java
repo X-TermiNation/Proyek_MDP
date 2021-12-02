@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -11,6 +12,7 @@ import android.os.Looper;
 import android.view.View;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -56,74 +58,125 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = binding.email.getText().toString();
                 String pass = binding.password.getText().toString();
                 String passconf = binding.passconf.getText().toString();
-                if(name.length() > 0 && email.length() > 0 && pass.length() > 0 && passconf.length() > 0)
-                {
-                    if(pass.equals(passconf))
-                    {
-                        User user = new User(name, email, pass);
-                        insertmySQL(name,email,pass);
-                        new AddUserSync(user, getApplicationContext(), new AddUserSync.AddUpdateNoteCallback() {
-                            @Override
-                            public void preExecute() {
-
-                            }
-
-                            @Override
-                            public void postExecute(String message) {
-                                makeText(message);
-                            }
-                        }).execute();
-
-                    }
-                    else
-                    {
-                        makeText("Konfirmasi password tidak sesuai");
-                    }
+                if (pass.equals(passconf)){
+                    User user = new User(name,email,pass);
+                    adduser(user);
+                }else{
+                    makeText("Konfirmasi password tidak sesuai");
                 }
-                else
-                {
-                    makeText("Data tidak boleh kosong");
-                }
+//                if(name.length() > 0 && email.length() > 0 && pass.length() > 0 && passconf.length() > 0)
+//                {
+//                    if(pass.equals(passconf))
+//                    {
+//                        User user = new User(name, email, pass);
+//                        insertmySQL(name,email,pass);
+//                        new AddUserSync(user, getApplicationContext(), new AddUserSync.AddUpdateNoteCallback() {
+//                            @Override
+//                            public void preExecute() {
+//
+//                            }
+//
+//                            @Override
+//                            public void postExecute(String message) {
+//                                makeText(message);
+//                            }
+//                        }).execute();
+//
+//                    }
+//                    else
+//                    {
+//                        makeText("Konfirmasi password tidak sesuai");
+//                    }
+//                }
+//                else
+//                {
+//                    makeText("Data tidak boleh kosong");
+//                }
 
             }
         });
     }
-    public void insertmySQL(String name,String email,String pass){
-        StringRequest stringRequest = new StringRequest(Request.Method.POST,
-                "http://localhost/myapi/insert.php"
-                , new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    JSONObject jsonObject = new JSONObject(response);
-                    String success = jsonObject.getString("success");
-                    if(success.equals("1")){
-                        System.out.println("Register Berhasil");
-                    }else{
-                        System.out.println("gagal");
-                    }
-                }catch (JSONException e){
-                    System.out.println("gagal");
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
+    public void adduser(User user){
+        StringRequest sr = new StringRequest(
+                Request.Method.POST,
+                getResources().getString(R.string.url),
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        System.out.println(response);
 
-            }
-        }){
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            int code = jsonObject.getInt("code");
+                            String message = jsonObject.getString("message");
+                            if (code == 1){
+                                Intent i = new Intent(RegisterActivity.this,HomeActivity.class);
+                                startActivity(i);
+                                finish();
+                            }
+                            Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println(error.getMessage());
+                    }
+                }
+        ){
+            @Nullable
             @Override
-            protected Map<String, String> getParams()  {
-                Map<String,String>parms=new HashMap<String, String>();
-                parms.put("name",name);
-                parms.put("email",email);
-                parms.put("password",pass);
-                return parms;
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<>();
+                params.put("function","adduser");
+                params.put("username",user.getName());
+                params.put("email", user.getEmail());
+                params.put("password", user.getPassword());
+                return params;
             }
         };
-        RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
-        requestQueue.add(stringRequest);
+        RequestQueue rq = Volley.newRequestQueue(this);
+        rq.add(sr);
     }
+//    public void insertmySQL(String name,String email,String pass){
+//        StringRequest stringRequest = new StringRequest(Request.Method.POST,
+//                "http://localhost/myapi/insert.php"
+//                , new Response.Listener<String>() {
+//            @Override
+//            public void onResponse(String response) {
+//                try {
+//                    JSONObject jsonObject = new JSONObject(response);
+//                    String success = jsonObject.getString("success");
+//                    if(success.equals("1")){
+//                        System.out.println("Register Berhasil");
+//                    }else{
+//                        System.out.println("gagal");
+//                    }
+//                }catch (JSONException e){
+//                    System.out.println("gagal");
+//                }
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//
+//            }
+//        }){
+//            @Override
+//            protected Map<String, String> getParams()  {
+//                Map<String,String>parms=new HashMap<String, String>();
+//                parms.put("name",name);
+//                parms.put("email",email);
+//                parms.put("password",pass);
+//                return parms;
+//            }
+//        };
+//        RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
+//        requestQueue.add(stringRequest);
+//    }
     public void makeText(String message)
     {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();

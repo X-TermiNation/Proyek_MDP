@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -11,11 +12,23 @@ import android.os.Looper;
 import android.view.View;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.myapplication.databinding.ActivityLoginBinding;
 import com.example.myapplication.databinding.ActivityMainBinding;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.lang.ref.WeakReference;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -33,51 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         bind.log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = bind.email.getText().toString();
-                String password = bind.password.getText().toString();
-                if(email.length() > 0 && password.length() > 0)
-                {
-                    new LoginSync(email, password, getApplicationContext(), new LoginSync.loginCallback() {
-                        @Override
-                        public void preExecute() {
-
-                        }
-
-                        @Override
-                        public void postExecute(List<User> listUser) {
-                            boolean isFound = false;
-                            for(User data: listUser)
-                            {
-                                if(data.getEmail().equals(email))
-                                {
-                                    isFound = true;
-                                    if(data.getPassword().equals(password))
-                                    {
-                                        Intent i = new Intent(LoginActivity.this, HomeActivity.class);
-                                        i.putExtra("loggedUser", data);
-                                        startActivity(i);
-                                        finish();
-                                    }
-                                    else
-                                    {
-                                        makeText("Password salah");
-                                    }
-                                }
-                            }
-
-                            if(!isFound)
-                            {
-                                makeText("User tidak ditemukan");
-                            }
-                        }
-                    }).execute();
-                }
-                else
-                {
-                    makeText("Data tidak boleh kosong");
-                }
-
-
+                Loginuser();
             }
         });
 
@@ -94,7 +63,54 @@ public class LoginActivity extends AppCompatActivity {
     {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
+    //volleylogin
+    public void Loginuser(){
+        StringRequest sr = new StringRequest(
+                Request.Method.POST,
+                getResources().getString(R.string.url),
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        System.out.println(response);
+
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            int code = jsonObject.getInt("code");
+                            String message = jsonObject.getString("message");
+                            if (code == 1){
+                                Intent i = new Intent(LoginActivity.this,HomeActivity.class);
+                                startActivity(i);
+                                finish();
+                            }
+                            Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println(error.getMessage());
+                    }
+                }
+        ){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("function", "login");
+                params.put("email", bind.email.getText().toString());
+                params.put("password", bind.password.getText().toString());
+
+                return params;
+            }
+        };
+        RequestQueue rq = Volley.newRequestQueue(this);
+        rq.add(sr);
+    }
 }
+
 
 class LoginSync{
     private final WeakReference<Context> weakContext;
