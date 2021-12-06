@@ -110,7 +110,7 @@ public class RegisterActivity extends AppCompatActivity {
                             int code = jsonObject.getInt("code");
                             String message = jsonObject.getString("message");
                             if (code == 1){
-                                Intent i = new Intent(RegisterActivity.this,HomeActivity.class);
+                                Intent i = new Intent(RegisterActivity.this,LoginActivity.class);
                                 startActivity(i);
                                 finish();
                             }
