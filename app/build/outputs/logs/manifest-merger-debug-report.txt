@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-33:12
 MERGED from [androidx.databinding:viewbinding:7.0.1] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\d825ece931fe0045bb62202fe8dfbaa7\transformed\jetified-viewbinding-7.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\8a8e023191734e83e554df59f35b3d2f\transformed\material-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\8a38102763b4d2234eea9a9e3bcfaff7\transformed\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
@@ -13,7 +13,7 @@ MERGED from [com.google.firebase:firebase-analytics:20.0.0] C:\Users\Russel Josh
 MERGED from [com.google.firebase:firebase-database:20.0.2] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\3c22fd6ccce70ccbc0997e4d20da8d1c\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\959f288c9642ddb64ff8e14545fb67dd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:17:1-83:12
 MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\8eedf01f81b92c9af397237b3b689654\transformed\room-runtime-2.3.0\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\7582209f194bf16628fb82a2e4a5de26\transformed\jetified-volley-1.1.1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\7c77fd4b2a6359fceead6e8b4049cac7\transformed\jetified-volley-1.2.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\b0161923f85d6d74bce3f8c1ce9490ce\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\1f311471cb2cf0b6540a93669619ce76\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\49d8d9913070358f6159759f8b3795e0\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:15:1-26:12
@@ -73,20 +73,20 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Russel Joshua 
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\ab587c6f6603d3ba96b4bef95fe952b7\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\64c2fb9e64ac2095bd10abc85d22be18\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\004895e1ab5c984104039f1c24f64be1\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml
 		INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-32:12
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-32:12
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:2:11-69
@@ -109,7 +109,7 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] C:
 	android:name
 		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:5:5-30:19
+ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:5:5-31:19
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\8a8e023191734e83e554df59f35b3d2f\transformed\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\8a8e023191734e83e554df59f35b3d2f\transformed\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\8a38102763b4d2234eea9a9e3bcfaff7\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -122,8 +122,6 @@ MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Russel Joshua C\
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\959f288c9642ddb64ff8e14545fb67dd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:26:5-81:19
 MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\8eedf01f81b92c9af397237b3b689654\transformed\room-runtime-2.3.0\AndroidManifest.xml:24:5-29:19
 MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\8eedf01f81b92c9af397237b3b689654\transformed\room-runtime-2.3.0\AndroidManifest.xml:24:5-29:19
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\7582209f194bf16628fb82a2e4a5de26\transformed\jetified-volley-1.1.1\AndroidManifest.xml:9:5-20
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\7582209f194bf16628fb82a2e4a5de26\transformed\jetified-volley-1.1.1\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\b0161923f85d6d74bce3f8c1ce9490ce\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:26:5-34:19
 MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\b0161923f85d6d74bce3f8c1ce9490ce\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:26:5-34:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\1f311471cb2cf0b6540a93669619ce76\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
@@ -173,41 +171,43 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ru
 	android:allowBackup
 		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:11:9-51
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:12:9-51
+	android:usesCleartextTraffic
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:11:9-44
 activity#com.example.myapplication.HomeActivity
-ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:12:9-14:40
+ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:13:9-15:40
 	android:exported
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:14:13-37
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:15:13-37
 	android:name
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:13:13-41
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:14:13-41
 activity#com.example.myapplication.RegisterActivity
-ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:15:9-17:39
+ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:16:9-18:39
 	android:exported
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:17:13-36
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:18:13-36
 	android:name
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:16:13-45
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:17:13-45
 activity#com.example.myapplication.MainActivity
-ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:18:9-20:40
+ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:19:9-21:40
 	android:exported
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:20:13-37
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:19:13-41
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:20:13-41
 activity#com.example.myapplication.LoginActivity
-ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:21:9-29:20
+ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:22:9-30:20
 	android:exported
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:23:13-36
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:24:13-36
 	android:name
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:22:13-42
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:23:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:24:13-28:29
+ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
-ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:27:17-77
+ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:27:27-74
+		ADDED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml:28:27-74
 uses-sdk
 INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\kuliah\semester_5\MDP\Project_MDP\Proyek_MDP\app\src\main\AndroidManifest.xml
@@ -230,8 +230,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Russel Joshua C\
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\959f288c9642ddb64ff8e14545fb67dd\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:21:5-44
 MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\8eedf01f81b92c9af397237b3b689654\transformed\room-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\8eedf01f81b92c9af397237b3b689654\transformed\room-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\7582209f194bf16628fb82a2e4a5de26\transformed\jetified-volley-1.1.1\AndroidManifest.xml:7:5-43
-MERGED from [com.android.volley:volley:1.1.1] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\7582209f194bf16628fb82a2e4a5de26\transformed\jetified-volley-1.1.1\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\7c77fd4b2a6359fceead6e8b4049cac7\transformed\jetified-volley-1.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\7c77fd4b2a6359fceead6e8b4049cac7\transformed\jetified-volley-1.2.1\AndroidManifest.xml:5:5-43
 MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\b0161923f85d6d74bce3f8c1ce9490ce\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\b0161923f85d6d74bce3f8c1ce9490ce\transformed\jetified-play-services-measurement-api-20.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Russel Joshua C\.gradle\caches\transforms-3\1f311471cb2cf0b6540a93669619ce76\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44

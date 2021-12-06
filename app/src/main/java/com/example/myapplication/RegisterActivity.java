@@ -131,7 +131,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params = new HashMap<>();
-                params.put("function","adduser");
+                params.put("function","register");
                 params.put("username",user.getName());
                 params.put("email", user.getEmail());
                 params.put("password", user.getPassword());
