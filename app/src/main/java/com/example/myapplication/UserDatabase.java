@@ -6,7 +6,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {User.class, Favourite.class}, version = 1)
+@Database(entities = {User.class, Favourite.class,Comment.class}, version = 1)
 public abstract class UserDatabase extends RoomDatabase {
     public abstract UserDao userDao();
 

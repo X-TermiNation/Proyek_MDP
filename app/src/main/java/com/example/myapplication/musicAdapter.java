@@ -71,6 +71,13 @@ public class musicAdapter extends RecyclerView.Adapter<musicAdapter.ViewHolder> 
         }
         public void bind(music music) {
             binding.tvItemJudul.setText(music.getJudul());
+            binding.btncomment.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(view.getContext(),CommentActivity.class);
+                    i.putExtra("loggedEmail",email);
+                }
+            });
             binding.btnloadpack.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

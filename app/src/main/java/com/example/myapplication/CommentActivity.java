@@ -1,0 +1,150 @@
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Toast;
+
+import com.example.myapplication.databinding.ActivityCommentBinding;
+import com.example.myapplication.databinding.ActivityHomeBinding;
+
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class CommentActivity extends AppCompatActivity {
+    private ActivityCommentBinding binding;
+    private String loggedEmail;
+    ArrayAdapter<Comment> adapter;
+    ArrayList<Comment> comment = new ArrayList<>();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_comment);
+        binding= ActivityCommentBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        Intent intent = getIntent();
+        if(intent.hasExtra("loggedEmail"))
+        {
+            loggedEmail = intent.getStringExtra("loggedEmail");
+        }
+        new getData(getApplicationContext(), new getData.getDataCallback() {
+            @Override
+            public void preExecute() {
+
+            }
+
+            @Override
+            public void postExecute(List<Comment> arr_comment) {
+                comment.addAll(arr_comment);
+                adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1,comment);
+                binding.lvItem.setAdapter(adapter);
+            }
+        }).execute();
+
+
+        binding.btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!binding.EtComment.getText().toString().equals("")){
+                    Comment comment = new Comment(loggedEmail,binding.EtComment.getText().toString());
+                    new AddCommentAsync(comment, getApplicationContext(), new AddCommentAsync.AddUpdateNoteCallback() {
+                        @Override
+                        public void preExecute() {
+
+                        }
+
+                        @Override
+                        public void postExecute(String message) {
+                            makeToast(message);
+                        }
+                    }).execute();
+                }
+            }
+        });
+    }
+    void makeToast(String pesan){
+        Toast.makeText(getApplicationContext(), pesan, Toast.LENGTH_SHORT).show();
+    }
+}
+
+class AddCommentAsync {
+    private final WeakReference<Context> weakContext;
+    private final WeakReference<AddUpdateNoteCallback> weakCallback;
+    private Comment comment;
+
+
+    public AddCommentAsync(Comment comment, Context context, AddUpdateNoteCallback callback) {
+        this.weakContext = new WeakReference<>(context);
+        this.weakCallback = new WeakReference<>(callback);
+        this.comment = comment;
+    }
+
+    void execute() {
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        Handler handler = new Handler(Looper.getMainLooper());
+        weakCallback.get().preExecute();
+        executorService.execute(new Runnable() {
+            @Override
+            public void run() {
+                Context context = weakContext.get();
+                UserDatabase userDatabase = UserDatabase.getUserDatabase(context);
+                userDatabase.userDao().insertComment(comment);
+
+                handler.post(() -> {
+                    String succesMessage = "New Comment Added";
+                    weakCallback.get().postExecute(succesMessage);
+                });
+            }
+        });
+    }
+
+    interface AddUpdateNoteCallback {
+        void preExecute();
+
+        void postExecute(String message);
+    }
+}
+
+class getData {
+    private final WeakReference<Context> weakContext;
+    private final WeakReference<getDataCallback> weakCallback;
+
+
+    public getData(Context context, getDataCallback callback) {
+        this.weakContext = new WeakReference<>(context);
+        this.weakCallback = new WeakReference<>(callback);
+    }
+
+    void execute() {
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        Handler handler = new Handler(Looper.getMainLooper());
+        weakCallback.get().preExecute();
+        executorService.execute(new Runnable() {
+            @Override
+            public void run() {
+                List<Comment> arr_comment;
+                Context context = weakContext.get();
+                UserDatabase userDatabase = UserDatabase.getUserDatabase(context);
+                userDatabase.userDao().getAllComment();
+                arr_comment = userDatabase.userDao().getAllComment();
+                handler.post(() -> {
+                    weakCallback.get().postExecute(arr_comment);
+                });
+            }
+        });
+    }
+
+    interface getDataCallback {
+        void preExecute();
+        void postExecute(List<Comment> arr_comment);
+    }
+}

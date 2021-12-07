@@ -1757,6 +1757,7 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id Et_comment
 id FUNCTION
 id FrameLayout
 id META
@@ -1862,6 +1863,7 @@ id btn22
 id btn30
 id btn31
 id btn32
+id btn_submit
 id btncomment
 id btnfavorite
 id btnloadpack
@@ -1991,6 +1993,7 @@ id linear
 id listMode
 id list_item
 id log
+id lv_item
 id masked
 id material_clock_display
 id material_clock_face
@@ -2199,6 +2202,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv_item_judul
+id tv_packName
 id tvstatus
 id unchecked
 id uniform
@@ -2274,6 +2278,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_comment
 layout activity_home
 layout activity_login
 layout activity_main

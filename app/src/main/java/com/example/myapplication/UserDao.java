@@ -16,8 +16,14 @@ public interface UserDao {
     @Query("select * from user")
     List<User> gettAllUser();
 
+    @Query("select * from comment")
+    List<Comment> getAllComment();
+
     @Insert
     void insertUser(User newUser);
+
+    @Insert
+    void insertComment(Comment newComment);
 
     @Update
     void updateUser(User user);
