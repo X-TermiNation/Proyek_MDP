@@ -34,13 +34,15 @@ public final class UserDatabase_Impl extends UserDatabase {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `user` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `email` TEXT, `password` TEXT)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `favourite` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `judul` TEXT, `email` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f2382b83967fc97022d131561176cc8f')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b688cfd4801921b07a05620fda8d3f0a')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `user`");
+        _db.execSQL("DROP TABLE IF EXISTS `favourite`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -93,9 +95,22 @@ public final class UserDatabase_Impl extends UserDatabase {
                   + " Expected:\n" + _infoUser + "\n"
                   + " Found:\n" + _existingUser);
         }
+        final HashMap<String, TableInfo.Column> _columnsFavourite = new HashMap<String, TableInfo.Column>(3);
+        _columnsFavourite.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsFavourite.put("judul", new TableInfo.Column("judul", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsFavourite.put("email", new TableInfo.Column("email", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysFavourite = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesFavourite = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoFavourite = new TableInfo("favourite", _columnsFavourite, _foreignKeysFavourite, _indicesFavourite);
+        final TableInfo _existingFavourite = TableInfo.read(_db, "favourite");
+        if (! _infoFavourite.equals(_existingFavourite)) {
+          return new RoomOpenHelper.ValidationResult(false, "favourite(com.example.myapplication.Favourite).\n"
+                  + " Expected:\n" + _infoFavourite + "\n"
+                  + " Found:\n" + _existingFavourite);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "f2382b83967fc97022d131561176cc8f", "bb34b73a52908c48ce4f449c0dd46c38");
+    }, "b688cfd4801921b07a05620fda8d3f0a", "dc970cb8c3bda680812b1e3e621f8eb6");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -108,7 +123,7 @@ public final class UserDatabase_Impl extends UserDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "user");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "user","favourite");
   }
 
   @Override
@@ -118,6 +133,7 @@ public final class UserDatabase_Impl extends UserDatabase {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `user`");
+      _db.execSQL("DELETE FROM `favourite`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();

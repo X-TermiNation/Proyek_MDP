@@ -10,36 +10,16 @@ com/example/myapplication/MainActivity.java
 com/example/myapplication/User.java
  com.example.myapplication.User
  com.example.myapplication.User$1
-com/example/myapplication/HomeFragment.java
- com.example.myapplication.HomeFragment
+com/example/myapplication/databinding/ActivityHomeBinding.java
+ com.example.myapplication.databinding.ActivityHomeBinding
 com/example/myapplication/databinding/LayoutMusicBinding.java
  com.example.myapplication.databinding.LayoutMusicBinding
 com/example/myapplication/databinding/ActivityRegisterBinding.java
  com.example.myapplication.databinding.ActivityRegisterBinding
-com/example/myapplication/musicAdapter.java
- com.example.myapplication.musicAdapter
- com.example.myapplication.musicAdapter$1
- com.example.myapplication.musicAdapter$OnItemClickCallback
- com.example.myapplication.musicAdapter$ViewHolder
- com.example.myapplication.musicAdapter$ViewHolder$1
- com.example.myapplication.musicAdapter$ViewHolder$2
-com/example/myapplication/databinding/ActivityHomeBinding.java
- com.example.myapplication.databinding.ActivityHomeBinding
-com/example/myapplication/UserDao.java
- com.example.myapplication.UserDao
-com/example/myapplication/BuildConfig.java
- com.example.myapplication.BuildConfig
-com/example/myapplication/UserDatabase.java
- com.example.myapplication.UserDatabase
-com/example/myapplication/databinding/ActivityMainBinding.java
- com.example.myapplication.databinding.ActivityMainBinding
 com/example/myapplication/databinding/ActivityLoginBinding.java
  com.example.myapplication.databinding.ActivityLoginBinding
 com/example/myapplication/databinding/FragmentHomeBinding.java
  com.example.myapplication.databinding.FragmentHomeBinding
-com/example/myapplication/HomeActivity.java
- com.example.myapplication.HomeActivity
- com.example.myapplication.HomeActivity$1
 com/example/myapplication/RegisterActivity.java
  com.example.myapplication.AddUserSync
  com.example.myapplication.AddUserSync$1
@@ -50,6 +30,10 @@ com/example/myapplication/RegisterActivity.java
  com.example.myapplication.RegisterActivity$3
  com.example.myapplication.RegisterActivity$4
  com.example.myapplication.RegisterActivity$5
+com/example/myapplication/databinding/ActivityMainBinding.java
+ com.example.myapplication.databinding.ActivityMainBinding
+com/example/myapplication/BuildConfig.java
+ com.example.myapplication.BuildConfig
 com/example/myapplication/LoginActivity.java
  com.example.myapplication.LoginActivity
  com.example.myapplication.LoginActivity$1
@@ -60,3 +44,30 @@ com/example/myapplication/LoginActivity.java
  com.example.myapplication.LoginSync
  com.example.myapplication.LoginSync$1
  com.example.myapplication.LoginSync$loginCallback
+com/example/myapplication/UserDao.java
+ com.example.myapplication.UserDao
+com/example/myapplication/UserDatabase.java
+ com.example.myapplication.UserDatabase
+com/example/myapplication/musicAdapter.java
+ com.example.myapplication.AddFavourite
+ com.example.myapplication.AddFavourite$1
+ com.example.myapplication.AddFavourite$AddFavouriteCallBack
+ com.example.myapplication.musicAdapter
+ com.example.myapplication.musicAdapter$1
+ com.example.myapplication.musicAdapter$OnItemClickCallback
+ com.example.myapplication.musicAdapter$ViewHolder
+ com.example.myapplication.musicAdapter$ViewHolder$1
+ com.example.myapplication.musicAdapter$ViewHolder$2
+ com.example.myapplication.musicAdapter$ViewHolder$2$1
+com/example/myapplication/Favourite.java
+ com.example.myapplication.Favourite
+ com.example.myapplication.Favourite$1
+com/example/myapplication/HomeFragment.java
+ com.example.myapplication.GetFavourite
+ com.example.myapplication.GetFavourite$1
+ com.example.myapplication.GetFavourite$GetFavouriteCallBack
+ com.example.myapplication.HomeFragment
+ com.example.myapplication.HomeFragment$1
+com/example/myapplication/HomeActivity.java
+ com.example.myapplication.HomeActivity
+ com.example.myapplication.HomeActivity$1

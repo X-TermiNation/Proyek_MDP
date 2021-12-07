@@ -26,7 +26,11 @@
                 $result = mysqli_query($conn, $sql_query);
                 if (mysqli_num_rows($result) > 0) {
                     $response["code"] = 1;
+                    $values = $result->fetch_row();
                     $response["message"] = "Login Successful";
+                    $response["user"] = $values[2];
+                    
+
                 } else {
                     $response["code"] = -3;
                     $response["message"] = "Invalid Username or Password";

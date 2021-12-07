@@ -22,6 +22,8 @@ public final class UserDao_Impl implements UserDao {
 
   private final EntityInsertionAdapter<User> __insertionAdapterOfUser;
 
+  private final EntityInsertionAdapter<Favourite> __insertionAdapterOfFavourite;
+
   private final EntityDeletionOrUpdateAdapter<User> __deletionAdapterOfUser;
 
   private final EntityDeletionOrUpdateAdapter<User> __updateAdapterOfUser;
@@ -51,6 +53,27 @@ public final class UserDao_Impl implements UserDao {
           stmt.bindNull(4);
         } else {
           stmt.bindString(4, value.getPassword());
+        }
+      }
+    };
+    this.__insertionAdapterOfFavourite = new EntityInsertionAdapter<Favourite>(__db) {
+      @Override
+      public String createQuery() {
+        return "INSERT OR ABORT INTO `favourite` (`id`,`judul`,`email`) VALUES (nullif(?, 0),?,?)";
+      }
+
+      @Override
+      public void bind(SupportSQLiteStatement stmt, Favourite value) {
+        stmt.bindLong(1, value.getId());
+        if (value.getJudul() == null) {
+          stmt.bindNull(2);
+        } else {
+          stmt.bindString(2, value.getJudul());
+        }
+        if (value.getEmail() == null) {
+          stmt.bindNull(3);
+        } else {
+          stmt.bindString(3, value.getEmail());
         }
       }
     };
@@ -100,6 +123,18 @@ public final class UserDao_Impl implements UserDao {
     __db.beginTransaction();
     try {
       __insertionAdapterOfUser.insert(newUser);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void insertFavourite(final Favourite favourite) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __insertionAdapterOfFavourite.insert(favourite);
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
@@ -220,6 +255,50 @@ public final class UserDao_Impl implements UserDao {
           _tmpPassword = _cursor.getString(_cursorIndexOfPassword);
         }
         _item = new User(_tmpName,_tmpEmail,_tmpPassword);
+        final int _tmpId;
+        _tmpId = _cursor.getInt(_cursorIndexOfId);
+        _item.setId(_tmpId);
+        _result.add(_item);
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @Override
+  public List<Favourite> getAllFavourite(final String email) {
+    final String _sql = "select * from favourite where LOWER(email) = LOWER(?)";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (email == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, email);
+    }
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+      final int _cursorIndexOfJudul = CursorUtil.getColumnIndexOrThrow(_cursor, "judul");
+      final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
+      final List<Favourite> _result = new ArrayList<Favourite>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final Favourite _item;
+        final String _tmpJudul;
+        if (_cursor.isNull(_cursorIndexOfJudul)) {
+          _tmpJudul = null;
+        } else {
+          _tmpJudul = _cursor.getString(_cursorIndexOfJudul);
+        }
+        final String _tmpEmail;
+        if (_cursor.isNull(_cursorIndexOfEmail)) {
+          _tmpEmail = null;
+        } else {
+          _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+        }
+        _item = new Favourite(_tmpJudul,_tmpEmail);
         final int _tmpId;
         _tmpId = _cursor.getInt(_cursorIndexOfId);
         _item.setId(_tmpId);

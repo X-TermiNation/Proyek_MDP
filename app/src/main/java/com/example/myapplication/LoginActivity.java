@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(bind.getRoot());
         bind.one.animate().alpha(1.0f).setDuration(5000);
         bind.toReg.setPaintFlags(bind.toReg.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+
         bind.log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,8 +78,10 @@ public class LoginActivity extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             int code = jsonObject.getInt("code");
                             String message = jsonObject.getString("message");
+                            String userEmail = jsonObject.getString("user");
                             if (code == 1){
                                 Intent i = new Intent(LoginActivity.this,HomeActivity.class);
+                                i.putExtra("loggedEmail", userEmail);
                                 startActivity(i);
                                 finish();
                             }

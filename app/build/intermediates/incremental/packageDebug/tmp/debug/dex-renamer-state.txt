@@ -1,12 +1,12 @@
-#Mon Dec 06 15:45:36 ICT 2021
+#Tue Dec 07 14:57:52 ICT 2021
 path.3=5/classes.dex
 path.2=2/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.3=D\:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
-base.2=D\:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
-base.1=D\:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.0=D\:\\kuliah\\semester_5\\MDP\\Project_MDP\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.3=C\:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+base.2=C\:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.1=C\:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=C\:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex

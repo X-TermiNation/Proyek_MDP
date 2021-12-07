@@ -1,5 +1,8 @@
 package com.example.myapplication;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.databinding.LayoutMusicBinding;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class musicAdapter extends RecyclerView.Adapter<musicAdapter.ViewHolder> {
 
@@ -18,10 +25,14 @@ public class musicAdapter extends RecyclerView.Adapter<musicAdapter.ViewHolder> 
     private ArrayList<music> listmusic;
     private OnItemClickCallback onItemClickCallback;
     Boolean cekfav [] = new Boolean[100];
+    private String email;
 
-    public musicAdapter(ArrayList<music> listmusic) {
+    public musicAdapter(ArrayList<music> listmusic, String email) {
         this.listmusic = listmusic;
+        this.email = email;
     }
+
+
 
     @NonNull
     @Override
@@ -87,6 +98,17 @@ public class musicAdapter extends RecyclerView.Adapter<musicAdapter.ViewHolder> 
                     if (cekfav[0]==false){
                         binding.btnfavorite.setImageResource(R.drawable.ic_baseline_favorite2_24);
                         cekfav[0]=true;
+                        new AddFavourite(email, music.getJudul(), view.getContext(), new AddFavourite.AddFavouriteCallBack() {
+                            @Override
+                            public void preExecute() {
+
+                            }
+
+                            @Override
+                            public void postExecute(String message) {
+                                System.out.println(message);
+                            }
+                        }).execute();
                     }else{
                         binding.btnfavorite.setImageResource(R.drawable.ic_baseline_favorite_24);
                         cekfav[0]=false;
@@ -100,3 +122,47 @@ public class musicAdapter extends RecyclerView.Adapter<musicAdapter.ViewHolder> 
         void onItemClicked(music music);
     }
 }
+
+class AddFavourite{
+    private final WeakReference<Context> weakContext;
+    private final WeakReference<AddFavouriteCallBack> weakCallback;
+    private String user;
+    private String music;
+
+    public AddFavourite(String user,String music, Context context, AddFavouriteCallBack callback) {
+        this.weakContext = new WeakReference<>(context);
+        this.weakCallback = new WeakReference<>(callback);
+        this.user = user;
+        this.music = music;
+    }
+    Boolean found = false;
+    void execute(){
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        Handler handler = new Handler(Looper.getMainLooper());
+        weakCallback.get().preExecute();
+        executorService.execute(new Runnable() {
+            @Override
+            public void run() {
+                Context context = weakContext.get();
+                UserDatabase userDatabase = UserDatabase.getUserDatabase(context);
+
+
+
+                userDatabase.userDao().insertFavourite(new Favourite(music, user));
+                handler.post(()->{
+                    String succesMessage = "User berhasil terdaftar";
+                    weakCallback.get().postExecute(succesMessage);
+                });
+
+            }
+        });
+    }
+
+
+    interface AddFavouriteCallBack{
+        void preExecute();
+        void postExecute(String message);
+    }
+}
+
+

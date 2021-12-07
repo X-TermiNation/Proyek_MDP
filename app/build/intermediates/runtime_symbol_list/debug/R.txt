@@ -1702,7 +1702,7 @@ int drawable design_snackbar_background 0x7f070081
 int drawable googleg_disabled_color_18 0x7f070082
 int drawable googleg_standard_color_18 0x7f070083
 int drawable green_button 0x7f070084
-int drawable ic_baseline_favorite2_24 0x7f0700b7
+int drawable ic_baseline_favorite2_24 0x7f070085
 int drawable ic_baseline_favorite_24 0x7f070086
 int drawable ic_baseline_mode_comment_24 0x7f070087
 int drawable ic_baseline_music_note_24 0x7f070088

@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
@@ -9,14 +10,20 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.myapplication.databinding.FragmentHomeBinding;
 
+import java.lang.ref.WeakReference;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,18 +33,25 @@ import java.util.List;
 public class HomeFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "status";
+    private static final String ARG_PARAM2 = "email";
+
 
     // TODO: Rename and change types of parameters
     private String status;
+    private String email;
+
+
     private musicAdapter musicAdapter;
     private FragmentHomeBinding binding;
     private int sound1,sound2,sound3,sound4,sound5,sound6,sound7,sound8,sound9,sound10,sound11,sound12;
 
     // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String status) {
+    public static HomeFragment newInstance(String status, String emailUser) {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, status);
+        args.putString(ARG_PARAM2, emailUser);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -47,29 +61,16 @@ public class HomeFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             status = getArguments().getString(ARG_PARAM1);
+            email = getArguments().getString(ARG_PARAM2);
         }
     }
+
+    ArrayList<music> listmusic = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
-        return binding.getRoot();
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        binding.tvstatus.setText(status);
-        if(status=="Home")
-            setUpRecyclerView();
-    }
-
-    void setUpRecyclerView(){
-        binding.rvmusicHome.setLayoutManager(new LinearLayoutManager(getContext()));
-        binding.rvmusicHome.setHasFixedSize(true);
-
-        ArrayList<music> listmusic = new ArrayList<>();
         sound1 = R.raw.key01;
         sound2 = R.raw.key02;
         sound3 = R.raw.key03;
@@ -97,8 +98,112 @@ public class HomeFragment extends Fragment {
         sound11 = R.raw.key01;
         sound12 = R.raw.key02;
         listmusic.add(new music("Drum",sound1,sound2,sound3,sound4,sound5,sound6,sound7,sound8,sound9,sound10,sound11,sound12));
+        return binding.getRoot();
 
-        musicAdapter=new musicAdapter(listmusic);
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        binding.tvstatus.setText(status);
+
+        if(status=="Home")
+        {
+            setUpRecyclerView();
+        }
+        else if(status == "Favorite")
+        {
+            System.out.println(status);
+            setUpRecyclerViewFav();
+        }
+
+
+    }
+
+    void setUpRecyclerView(){
+        binding.rvmusicHome.setLayoutManager(new LinearLayoutManager(getContext()));
+        binding.rvmusicHome.setHasFixedSize(true);
+
+
+
+        musicAdapter=new musicAdapter(listmusic, email);
         binding.rvmusicHome.setAdapter(musicAdapter);
+    }
+
+    void setUpRecyclerViewFav()
+    {
+        binding.rvmusicHome.setLayoutManager(new LinearLayoutManager(getContext()));
+        binding.rvmusicHome.setHasFixedSize(true);
+
+        System.out.println(email);
+        ArrayList<music> musfav = new ArrayList<>();
+        new GetFavourite(email, getContext(), new GetFavourite.GetFavouriteCallBack() {
+            @Override
+            public void preExecute() {
+
+            }
+
+            @Override
+            public void postExecute(List<Favourite> listFav) {
+                for(Favourite data:listFav)
+                {
+                    for(music mus:listmusic)
+                    {
+                        if(data.getJudul().equals(mus.getJudul()))
+                        {
+                            if(musfav.add(mus))
+                            {
+                                System.out.println("masuk");
+                            }
+
+
+                        }
+                    }
+                }
+
+                System.out.println(musfav.size() + "s");
+                musicAdapter=new musicAdapter(musfav, email);
+                binding.rvmusicHome.setAdapter(musicAdapter);
+            }
+        }).execute();
+
+
+    }
+}
+
+class GetFavourite{
+    private final WeakReference<Context> weakContext;
+    private final WeakReference<GetFavouriteCallBack> weakCallback;
+    private String user;
+
+    public GetFavourite(String user, Context context, GetFavouriteCallBack callback) {
+        this.weakContext = new WeakReference<>(context);
+        this.weakCallback = new WeakReference<>(callback);
+        this.user = user;
+    }
+    Boolean found = false;
+    void execute(){
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        Handler handler = new Handler(Looper.getMainLooper());
+        weakCallback.get().preExecute();
+        executorService.execute(new Runnable() {
+            @Override
+            public void run() {
+                Context context = weakContext.get();
+                UserDatabase userDatabase = UserDatabase.getUserDatabase(context);
+                List<Favourite> listFav;
+                listFav = userDatabase.userDao().getAllFavourite(user);
+                handler.post(()->{
+
+                    weakCallback.get().postExecute(listFav);
+                });
+
+            }
+        });
+    }
+
+
+    interface GetFavouriteCallBack{
+        void preExecute();
+        void postExecute(List<Favourite> listFav);
     }
 }

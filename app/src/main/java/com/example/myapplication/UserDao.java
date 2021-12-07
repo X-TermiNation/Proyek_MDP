@@ -24,4 +24,10 @@ public interface UserDao {
 
     @Delete
     void deleteUser(User user);
+
+    @Insert
+    void insertFavourite(Favourite favourite);
+
+    @Query("select * from favourite where LOWER(email) = LOWER(:email)")
+    List<Favourite> getAllFavourite(String email);
 }
