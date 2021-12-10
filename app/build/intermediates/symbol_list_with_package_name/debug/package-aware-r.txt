@@ -1863,6 +1863,7 @@ id btn22
 id btn30
 id btn31
 id btn32
+id btn_Out
 id btn_submit
 id btncomment
 id btnfavorite
@@ -1980,6 +1981,7 @@ id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
+id keluar_btn
 id labelGroup
 id labeled
 id largeLabel
@@ -2379,6 +2381,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottomnav
+menu nav_comment
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

@@ -76,6 +76,7 @@ public class musicAdapter extends RecyclerView.Adapter<musicAdapter.ViewHolder> 
                 public void onClick(View view) {
                     Intent i = new Intent(view.getContext(),CommentActivity.class);
                     i.putExtra("loggedEmail",email);
+                    view.getContext().startActivity(i);
                 }
             });
             binding.btnloadpack.setOnClickListener(new View.OnClickListener() {

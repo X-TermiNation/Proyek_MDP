@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -7,6 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
@@ -65,16 +69,47 @@ public class CommentActivity extends AppCompatActivity {
                         @Override
                         public void postExecute(String message) {
                             makeToast(message);
+                            adapter.notifyDataSetChanged();
+                            finish();
+                            startActivity(getIntent());
                         }
+
                     }).execute();
                 }
+            }
+        });
+        binding.btnOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),HomeActivity.class);
+                i.putExtra("loggedEmail", loggedEmail);
+                finish();
             }
         });
     }
     void makeToast(String pesan){
         Toast.makeText(getApplicationContext(), pesan, Toast.LENGTH_SHORT).show();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.nav_comment,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.keluar_btn:
+                Intent i = new Intent(getApplicationContext(),HomeActivity.class);
+                i.putExtra("loggedEmail", loggedEmail);
+                finish();
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
+
 
 class AddCommentAsync {
     private final WeakReference<Context> weakContext;

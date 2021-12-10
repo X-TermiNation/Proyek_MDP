@@ -9,7 +9,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="150sp"
+        android:layout_height="100sp"
         android:textAlignment="center"
         android:textSize="16dp"
         android:id="@+id/tv_packName"/>
@@ -36,7 +36,12 @@
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
-
+    <Button
+        android:layout_marginTop="40sp"
+        android:layout_width="match_parent"
+        android:id="@+id/btn_Out"
+        android:text="Keluar"
+        android:layout_height="45sp"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

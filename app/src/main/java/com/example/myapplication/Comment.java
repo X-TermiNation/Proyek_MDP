@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -70,5 +71,11 @@ public class Comment implements Parcelable {
         parcel.writeInt(id);
         parcel.writeString(name);
         parcel.writeString(commentUser);
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return commentUser;
     }
 }
