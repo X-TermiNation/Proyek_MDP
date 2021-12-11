@@ -96,6 +96,9 @@ public class musicAdapter extends RecyclerView.Adapter<musicAdapter.ViewHolder> 
                     intent.putExtra("sound10", music.getSound10());
                     intent.putExtra("sound11", music.getSound11());
                     intent.putExtra("sound12", music.getSound12());
+                    intent.putExtra("instrument", music.getJudul());
+                    intent.putExtra("email", email);
+
                     v.getContext().startActivity(intent);
 
                 }

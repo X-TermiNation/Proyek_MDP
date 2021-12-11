@@ -64,7 +64,13 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button recordbtn;
 
   @NonNull
+  public final Button showOtherSong;
+
+  @NonNull
   public final TextView timer;
+
+  @NonNull
+  public final Button uploadBtn;
 
   private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull AppCompatButton btn00,
       @NonNull AppCompatButton btn01, @NonNull AppCompatButton btn02,
@@ -73,7 +79,7 @@ public final class ActivityMainBinding implements ViewBinding {
       @NonNull AppCompatButton btn21, @NonNull AppCompatButton btn22,
       @NonNull AppCompatButton btn30, @NonNull AppCompatButton btn31,
       @NonNull AppCompatButton btn32, @NonNull Button play, @NonNull Button recordbtn,
-      @NonNull TextView timer) {
+      @NonNull Button showOtherSong, @NonNull TextView timer, @NonNull Button uploadBtn) {
     this.rootView = rootView;
     this.btn00 = btn00;
     this.btn01 = btn01;
@@ -89,7 +95,9 @@ public final class ActivityMainBinding implements ViewBinding {
     this.btn32 = btn32;
     this.play = play;
     this.recordbtn = recordbtn;
+    this.showOtherSong = showOtherSong;
     this.timer = timer;
+    this.uploadBtn = uploadBtn;
   }
 
   @Override
@@ -203,14 +211,27 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.showOtherSong;
+      Button showOtherSong = ViewBindings.findChildViewById(rootView, id);
+      if (showOtherSong == null) {
+        break missingId;
+      }
+
       id = R.id.timer;
       TextView timer = ViewBindings.findChildViewById(rootView, id);
       if (timer == null) {
         break missingId;
       }
 
+      id = R.id.uploadBtn;
+      Button uploadBtn = ViewBindings.findChildViewById(rootView, id);
+      if (uploadBtn == null) {
+        break missingId;
+      }
+
       return new ActivityMainBinding((LinearLayout) rootView, btn00, btn01, btn02, btn10, btn11,
-          btn12, btn20, btn21, btn22, btn30, btn31, btn32, play, recordbtn, timer);
+          btn12, btn20, btn21, btn22, btn30, btn31, btn32, play, recordbtn, showOtherSong, timer,
+          uploadBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -2125,6 +2125,7 @@ id selection_type
 id shortcut
 id showCustom
 id showHome
+id showOtherSong
 id showTitle
 id sin
 id skipCollapsed
@@ -2210,6 +2211,7 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id uploadBtn
 id useLogo
 id view_offset_helper
 id visible
@@ -2284,6 +2286,7 @@ layout activity_comment
 layout activity_home
 layout activity_login
 layout activity_main
+layout activity_player_song
 layout activity_register
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row

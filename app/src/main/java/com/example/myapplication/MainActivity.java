@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -9,8 +10,19 @@ import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.myapplication.databinding.ActivityMainBinding;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -59,6 +71,13 @@ public class MainActivity extends AppCompatActivity {
                     isRecording = false;
                     timer.cancel();
                 }
+            }
+        });
+
+        binding.uploadBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addSong(getIntent().getStringExtra("instrument"), record.toString(), getIntent().getStringExtra("email"));
             }
         });
 
@@ -119,6 +138,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
+
+        binding.showOtherSong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PlayerSong.class);
+                intent.putExtra("instrument", getIntent().getStringExtra("instrument"));
+                System.out.println(getIntent().getStringExtra("instrument"));
+                startActivity(intent);
+            }
+        });
+
         binding.play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -143,6 +173,52 @@ public class MainActivity extends AppCompatActivity {
         sound11 = sp.load(getApplicationContext(),intent.getIntExtra("sound11",0),1);
         sound12 = sp.load(getApplicationContext(),intent.getIntExtra("sound12",0),1);
     }
+
+
+    public void addSong(String instrument, String songmap, String email){
+        StringRequest sr = new StringRequest(
+                Request.Method.POST,
+                getResources().getString(R.string.url),
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        System.out.println(response + "ez");
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            int code = jsonObject.getInt("code");
+                            String message = jsonObject.getString("message");
+                            if (code == 1){
+                                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println(error.getMessage());
+                    }
+                }
+        ){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<>();
+                System.out.println(songmap);
+
+                params.put("function","addsong");
+                params.put("instrument",instrument);
+                params.put("songmap", songmap);
+                params.put("email", email);
+                return params;
+            }
+        };
+        RequestQueue rq = Volley.newRequestQueue(this);
+        rq.add(sr);
+    }
+
     public void play00(View v){
         sp.play(sound1,1.0f,1.0f,0,0,10f);
         if(isRecording)

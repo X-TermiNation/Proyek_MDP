@@ -28,6 +28,9 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.myapplication.PlayerSong"
+            android:exported="false" />
+        <activity
             android:name="com.example.myapplication.CommentActivity"
             android:exported="true" />
         <activity

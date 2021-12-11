@@ -1,4 +1,4 @@
-<?PHP 
+<?php
     include_once("connection.php"); 
 
     $response = array();
@@ -9,6 +9,13 @@
             login($conn);
         } else if ($func == "register") {
             adduser($conn);
+        } else if($func == "addsong")
+        {
+            addsong($conn);
+        }
+        else if($func == "getsong")
+        {
+            getsong($conn);
         }
     } else {
         $response["code"] = -1;
@@ -17,6 +24,46 @@
     }
 
 
+    function addsong($conn)
+    {
+        if(isset($_POST['instrument']) && isset($_POST['songmap']) && isset($_POST['email']))
+        {
+            $instrument = $_POST['instrument'];
+            $songmap = $_POST['songmap'];
+            $email = $_POST['email'];
+            $sql_query = "INSERT INTO savedsongs(INSTRUMENT, SONGMAP, EMAIL) VALUES('$instrument', '$songmap', '$email')";
+            $query = mysqli_query($conn, $sql_query);
+            if ($query) {
+                $response["code"] = 1;
+                $response["message"] = "Data Inserted!";
+            } else {
+                $response["code"] = -3;
+                $response["message"] = "Insert Data Failed!";
+            }
+            echo json_encode($response);
+
+        }
+    }
+
+    function getsong($conn)
+    {
+        if(isset($_POST['instrument']))
+        {
+            $instrument = $_POST['instrument'];
+            $sql_query = "SELECT SONGMAP FROM savedsongs WHERE INSTRUMENT = '$instrument'";
+            $sql_query2 = "SELECT EMAIL FROM savedsongs WHERE INSTRUMENT = '$instrument'";
+
+            $result = mysqli_query($conn, $sql_query);
+            $result2 = mysqli_query($conn, $sql_query2);
+
+            $response["songmap"] = json_encode(mysqli_fetch_all($result, MYSQLI_ASSOC));
+            $response["email"] = json_encode(mysqli_fetch_all($result2, MYSQLI_ASSOC));
+            $response["code"] = 1;
+            echo json_encode($response);
+            
+
+        }
+    }
 
     function login($conn) {
         if (isset($_POST["email"]) && isset($_POST["password"])) {
@@ -29,8 +76,6 @@
                     $values = $result->fetch_row();
                     $response["message"] = "Login Successful";
                     $response["user"] = $values[2];
-                    
-
                 } else {
                     $response["code"] = -3;
                     $response["message"] = "Invalid Username or Password";
