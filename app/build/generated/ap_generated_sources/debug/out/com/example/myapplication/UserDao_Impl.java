@@ -61,7 +61,7 @@ public final class UserDao_Impl implements UserDao {
     this.__insertionAdapterOfComment = new EntityInsertionAdapter<Comment>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `comment` (`id`,`name`,`commentUser`) VALUES (nullif(?, 0),?,?)";
+        return "INSERT OR ABORT INTO `comment` (`id`,`name`,`commentContent`,`commentUser`) VALUES (nullif(?, 0),?,?,?)";
       }
 
       @Override
@@ -72,10 +72,15 @@ public final class UserDao_Impl implements UserDao {
         } else {
           stmt.bindString(2, value.getName());
         }
-        if (value.getCommentUser() == null) {
+        if (value.getCommentContent() == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.getCommentUser());
+          stmt.bindString(3, value.getCommentContent());
+        }
+        if (value.getCommentUser() == null) {
+          stmt.bindNull(4);
+        } else {
+          stmt.bindString(4, value.getCommentUser());
         }
       }
     };
@@ -311,6 +316,7 @@ public final class UserDao_Impl implements UserDao {
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+      final int _cursorIndexOfCommentContent = CursorUtil.getColumnIndexOrThrow(_cursor, "commentContent");
       final int _cursorIndexOfCommentUser = CursorUtil.getColumnIndexOrThrow(_cursor, "commentUser");
       final List<Comment> _result = new ArrayList<Comment>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -321,13 +327,70 @@ public final class UserDao_Impl implements UserDao {
         } else {
           _tmpName = _cursor.getString(_cursorIndexOfName);
         }
+        final String _tmpCommentContent;
+        if (_cursor.isNull(_cursorIndexOfCommentContent)) {
+          _tmpCommentContent = null;
+        } else {
+          _tmpCommentContent = _cursor.getString(_cursorIndexOfCommentContent);
+        }
         final String _tmpCommentUser;
         if (_cursor.isNull(_cursorIndexOfCommentUser)) {
           _tmpCommentUser = null;
         } else {
           _tmpCommentUser = _cursor.getString(_cursorIndexOfCommentUser);
         }
-        _item = new Comment(_tmpName,_tmpCommentUser);
+        _item = new Comment(_tmpName,_tmpCommentContent,_tmpCommentUser);
+        final int _tmpId;
+        _tmpId = _cursor.getInt(_cursorIndexOfId);
+        _item.setId(_tmpId);
+        _result.add(_item);
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @Override
+  public List<Comment> getComment(final String commentContent) {
+    final String _sql = "select * from comment where LOWER(commentContent) = LOWER(?)";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (commentContent == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, commentContent);
+    }
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+      final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+      final int _cursorIndexOfCommentContent = CursorUtil.getColumnIndexOrThrow(_cursor, "commentContent");
+      final int _cursorIndexOfCommentUser = CursorUtil.getColumnIndexOrThrow(_cursor, "commentUser");
+      final List<Comment> _result = new ArrayList<Comment>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final Comment _item;
+        final String _tmpName;
+        if (_cursor.isNull(_cursorIndexOfName)) {
+          _tmpName = null;
+        } else {
+          _tmpName = _cursor.getString(_cursorIndexOfName);
+        }
+        final String _tmpCommentContent;
+        if (_cursor.isNull(_cursorIndexOfCommentContent)) {
+          _tmpCommentContent = null;
+        } else {
+          _tmpCommentContent = _cursor.getString(_cursorIndexOfCommentContent);
+        }
+        final String _tmpCommentUser;
+        if (_cursor.isNull(_cursorIndexOfCommentUser)) {
+          _tmpCommentUser = null;
+        } else {
+          _tmpCommentUser = _cursor.getString(_cursorIndexOfCommentUser);
+        }
+        _item = new Comment(_tmpName,_tmpCommentContent,_tmpCommentUser);
         final int _tmpId;
         _tmpId = _cursor.getInt(_cursorIndexOfId);
         _item.setId(_tmpId);

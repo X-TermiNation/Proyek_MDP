@@ -27,6 +27,7 @@ import java.util.concurrent.Executors;
 public class CommentActivity extends AppCompatActivity {
     private ActivityCommentBinding binding;
     private String loggedEmail;
+    private String commentContent;
     ArrayAdapter<Comment> adapter;
     ArrayList<Comment> comment = new ArrayList<>();
     @Override
@@ -40,7 +41,10 @@ public class CommentActivity extends AppCompatActivity {
         {
             loggedEmail = intent.getStringExtra("loggedEmail");
         }
-        new getData(getApplicationContext(), new getData.getDataCallback() {
+        if(intent.hasExtra("commentContent")){
+            commentContent = intent.getStringExtra("commentContent");
+        }
+        new getData(commentContent,getApplicationContext(), new getData.getDataCallback() {
             @Override
             public void preExecute() {
 
@@ -59,7 +63,7 @@ public class CommentActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(!binding.EtComment.getText().toString().equals("")){
-                    Comment comment = new Comment(loggedEmail,binding.EtComment.getText().toString());
+                    Comment comment = new Comment(loggedEmail,commentContent,binding.EtComment.getText().toString());
                     new AddCommentAsync(comment, getApplicationContext(), new AddCommentAsync.AddUpdateNoteCallback() {
                         @Override
                         public void preExecute() {
@@ -152,9 +156,10 @@ class AddCommentAsync {
 class getData {
     private final WeakReference<Context> weakContext;
     private final WeakReference<getDataCallback> weakCallback;
+    private String commentContent;
 
-
-    public getData(Context context, getDataCallback callback) {
+    public getData(String commentContent,Context context, getDataCallback callback) {
+        this.commentContent = commentContent;
         this.weakContext = new WeakReference<>(context);
         this.weakCallback = new WeakReference<>(callback);
     }
@@ -169,8 +174,8 @@ class getData {
                 List<Comment> arr_comment;
                 Context context = weakContext.get();
                 UserDatabase userDatabase = UserDatabase.getUserDatabase(context);
-                userDatabase.userDao().getAllComment();
-                arr_comment = userDatabase.userDao().getAllComment();
+                userDatabase.userDao().getComment(commentContent);
+                arr_comment = userDatabase.userDao().getComment(commentContent);
                 handler.post(() -> {
                     weakCallback.get().postExecute(arr_comment);
                 });

@@ -35,9 +35,9 @@ public final class UserDatabase_Impl extends UserDatabase {
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `user` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `email` TEXT, `password` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `favourite` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `judul` TEXT, `email` TEXT)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `comment` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `commentUser` TEXT)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `comment` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `commentContent` TEXT, `commentUser` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '30566bc648cae92da54bfa6a583d7147')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '37b51d59d36d71bb84f0debdebe34517')");
       }
 
       @Override
@@ -110,9 +110,10 @@ public final class UserDatabase_Impl extends UserDatabase {
                   + " Expected:\n" + _infoFavourite + "\n"
                   + " Found:\n" + _existingFavourite);
         }
-        final HashMap<String, TableInfo.Column> _columnsComment = new HashMap<String, TableInfo.Column>(3);
+        final HashMap<String, TableInfo.Column> _columnsComment = new HashMap<String, TableInfo.Column>(4);
         _columnsComment.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsComment.put("name", new TableInfo.Column("name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsComment.put("commentContent", new TableInfo.Column("commentContent", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsComment.put("commentUser", new TableInfo.Column("commentUser", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysComment = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesComment = new HashSet<TableInfo.Index>(0);
@@ -125,7 +126,7 @@ public final class UserDatabase_Impl extends UserDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "30566bc648cae92da54bfa6a583d7147", "69c33f32a6267a2e96fd7b8745eb9f83");
+    }, "37b51d59d36d71bb84f0debdebe34517", "e51c6d8b04fe7abb8ade33de43dc713f");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

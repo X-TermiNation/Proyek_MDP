@@ -18,6 +18,8 @@ public interface UserDao {
 
     @Query("select * from comment")
     List<Comment> getAllComment();
+    @Query("select * from comment where LOWER(commentContent) = LOWER(:commentContent)")
+    List<Comment> getComment(String commentContent);
 
     @Insert
     void insertUser(User newUser);

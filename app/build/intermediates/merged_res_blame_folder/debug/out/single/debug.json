@@ -208,12 +208,12 @@
         "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\raw\\key03.mp3"
     },
     {
-        "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\menu_nav_comment.xml.flat",
         "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\menu\\nav_comment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Tan\\AndroidStudioProjects\\Proyek_MDP\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",

@@ -12,21 +12,14 @@ public class Comment implements Parcelable {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String name;
+    private String commentContent;
     private String commentUser;
 
     protected Comment(Parcel in) {
         id = in.readInt();
         name = in.readString();
+        commentContent = in.readString();
         commentUser = in.readString();
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Comment(String name, String commentUser) {
-        this.name = name;
-        this.commentUser = commentUser;
     }
 
     public static final Creator<Comment> CREATOR = new Creator<Comment>() {
@@ -40,6 +33,24 @@ public class Comment implements Parcelable {
             return new Comment[size];
         }
     };
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Comment(String name,String commentContent, String commentUser) {
+        this.commentContent = commentContent;
+        this.name = name;
+        this.commentUser = commentUser;
+    }
+
+    public String getCommentContent() {
+        return commentContent;
+    }
+
+    public void setCommentContent(String commentContent) {
+        this.commentContent = commentContent;
+    }
 
     public String getName() {
         return name;
@@ -61,6 +72,12 @@ public class Comment implements Parcelable {
         this.commentUser = commentUser;
     }
 
+    @NonNull
+    @Override
+    public String toString() {
+        return commentUser;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -70,12 +87,7 @@ public class Comment implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeInt(id);
         parcel.writeString(name);
+        parcel.writeString(commentContent);
         parcel.writeString(commentUser);
-    }
-
-    @NonNull
-    @Override
-    public String toString() {
-        return commentUser;
     }
 }
