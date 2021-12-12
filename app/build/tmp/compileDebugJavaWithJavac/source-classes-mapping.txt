@@ -1,28 +1,31 @@
 com/example/myapplication/music.java
  com.example.myapplication.music
  com.example.myapplication.music$1
-com/example/myapplication/BuildConfig.java
- com.example.myapplication.BuildConfig
-com/example/myapplication/Comment.java
- com.example.myapplication.Comment
- com.example.myapplication.Comment$1
-com/example/myapplication/User.java
- com.example.myapplication.User
- com.example.myapplication.User$1
-com/example/myapplication/UserDao.java
- com.example.myapplication.UserDao
-com/example/myapplication/UserDatabase.java
- com.example.myapplication.UserDatabase
-com/example/myapplication/Favourite.java
- com.example.myapplication.Favourite
- com.example.myapplication.Favourite$1
 com/example/myapplication/databinding/ActivityPlayerSongBinding.java
  com.example.myapplication.databinding.ActivityPlayerSongBinding
-com/example/myapplication/databinding/ActivityHomeBinding.java
- com.example.myapplication.databinding.ActivityHomeBinding
-com/example/myapplication/HomeActivity.java
- com.example.myapplication.HomeActivity
- com.example.myapplication.HomeActivity$1
+com/example/myapplication/Songs.java
+ com.example.myapplication.Songs
+com/example/myapplication/PlayerSong.java
+ com.example.myapplication.MyListAdapter
+ com.example.myapplication.MyListAdapter$1
+ com.example.myapplication.MyListAdapter$1$1
+ com.example.myapplication.MyListAdapter$userHolder
+ com.example.myapplication.PlayerSong
+ com.example.myapplication.PlayerSong$1
+ com.example.myapplication.PlayerSong$2
+ com.example.myapplication.PlayerSong$3
+ com.example.myapplication.PlayerSong$4
+com/example/myapplication/MainActivity.java
+ com.example.myapplication.MainActivity
+ com.example.myapplication.MainActivity$1
+ com.example.myapplication.MainActivity$2
+ com.example.myapplication.MainActivity$3
+ com.example.myapplication.MainActivity$4
+ com.example.myapplication.MainActivity$5
+ com.example.myapplication.MainActivity$6
+ com.example.myapplication.MainActivity$7
+ com.example.myapplication.MainActivity$8
+ com.example.myapplication.MainActivity$9
 com/example/myapplication/LoginActivity.java
  com.example.myapplication.LoginActivity
  com.example.myapplication.LoginActivity$1
@@ -39,40 +42,15 @@ com/example/myapplication/HomeFragment.java
  com.example.myapplication.GetFavourite$GetFavouriteCallBack
  com.example.myapplication.HomeFragment
  com.example.myapplication.HomeFragment$1
+com/example/myapplication/databinding/CustomListviewBinding.java
+ com.example.myapplication.databinding.CustomListviewBinding
 com/example/myapplication/databinding/LayoutMusicBinding.java
  com.example.myapplication.databinding.LayoutMusicBinding
 com/example/myapplication/databinding/ActivityRegisterBinding.java
  com.example.myapplication.databinding.ActivityRegisterBinding
-com/example/myapplication/databinding/FragmentHomeBinding.java
- com.example.myapplication.databinding.FragmentHomeBinding
-com/example/myapplication/RegisterActivity.java
- com.example.myapplication.AddUserSync
- com.example.myapplication.AddUserSync$1
- com.example.myapplication.AddUserSync$AddUpdateNoteCallback
- com.example.myapplication.RegisterActivity
- com.example.myapplication.RegisterActivity$1
- com.example.myapplication.RegisterActivity$2
- com.example.myapplication.RegisterActivity$3
- com.example.myapplication.RegisterActivity$4
- com.example.myapplication.RegisterActivity$5
-com/example/myapplication/CommentActivity.java
- com.example.myapplication.AddCommentAsync
- com.example.myapplication.AddCommentAsync$1
- com.example.myapplication.AddCommentAsync$AddUpdateNoteCallback
- com.example.myapplication.CommentActivity
- com.example.myapplication.CommentActivity$1
- com.example.myapplication.CommentActivity$2
- com.example.myapplication.CommentActivity$2$1
- com.example.myapplication.CommentActivity$3
- com.example.myapplication.getData
- com.example.myapplication.getData$1
- com.example.myapplication.getData$getDataCallback
-com/example/myapplication/databinding/ActivityMainBinding.java
- com.example.myapplication.databinding.ActivityMainBinding
-com/example/myapplication/databinding/ActivityCommentBinding.java
- com.example.myapplication.databinding.ActivityCommentBinding
-com/example/myapplication/databinding/ActivityLoginBinding.java
- com.example.myapplication.databinding.ActivityLoginBinding
+com/example/myapplication/Favourite.java
+ com.example.myapplication.Favourite
+ com.example.myapplication.Favourite$1
 com/example/myapplication/musicAdapter.java
  com.example.myapplication.AddFavourite
  com.example.myapplication.AddFavourite$1
@@ -85,19 +63,50 @@ com/example/myapplication/musicAdapter.java
  com.example.myapplication.musicAdapter$ViewHolder$2
  com.example.myapplication.musicAdapter$ViewHolder$3
  com.example.myapplication.musicAdapter$ViewHolder$3$1
-com/example/myapplication/PlayerSong.java
- com.example.myapplication.PlayerSong
- com.example.myapplication.PlayerSong$1
- com.example.myapplication.PlayerSong$2
- com.example.myapplication.PlayerSong$3
-com/example/myapplication/MainActivity.java
- com.example.myapplication.MainActivity
- com.example.myapplication.MainActivity$1
- com.example.myapplication.MainActivity$2
- com.example.myapplication.MainActivity$3
- com.example.myapplication.MainActivity$4
- com.example.myapplication.MainActivity$5
- com.example.myapplication.MainActivity$6
- com.example.myapplication.MainActivity$7
- com.example.myapplication.MainActivity$8
- com.example.myapplication.MainActivity$9
+com/example/myapplication/RegisterActivity.java
+ com.example.myapplication.AddUserSync
+ com.example.myapplication.AddUserSync$1
+ com.example.myapplication.AddUserSync$AddUpdateNoteCallback
+ com.example.myapplication.RegisterActivity
+ com.example.myapplication.RegisterActivity$1
+ com.example.myapplication.RegisterActivity$2
+ com.example.myapplication.RegisterActivity$3
+ com.example.myapplication.RegisterActivity$4
+ com.example.myapplication.RegisterActivity$5
+com/example/myapplication/UserDao.java
+ com.example.myapplication.UserDao
+com/example/myapplication/CommentActivity.java
+ com.example.myapplication.AddCommentAsync
+ com.example.myapplication.AddCommentAsync$1
+ com.example.myapplication.AddCommentAsync$AddUpdateNoteCallback
+ com.example.myapplication.CommentActivity
+ com.example.myapplication.CommentActivity$1
+ com.example.myapplication.CommentActivity$2
+ com.example.myapplication.CommentActivity$2$1
+ com.example.myapplication.CommentActivity$3
+ com.example.myapplication.getData
+ com.example.myapplication.getData$1
+ com.example.myapplication.getData$getDataCallback
+com/example/myapplication/Comment.java
+ com.example.myapplication.Comment
+ com.example.myapplication.Comment$1
+com/example/myapplication/BuildConfig.java
+ com.example.myapplication.BuildConfig
+com/example/myapplication/UserDatabase.java
+ com.example.myapplication.UserDatabase
+com/example/myapplication/databinding/ActivityMainBinding.java
+ com.example.myapplication.databinding.ActivityMainBinding
+com/example/myapplication/databinding/ActivityCommentBinding.java
+ com.example.myapplication.databinding.ActivityCommentBinding
+com/example/myapplication/databinding/ActivityLoginBinding.java
+ com.example.myapplication.databinding.ActivityLoginBinding
+com/example/myapplication/databinding/FragmentHomeBinding.java
+ com.example.myapplication.databinding.FragmentHomeBinding
+com/example/myapplication/HomeActivity.java
+ com.example.myapplication.HomeActivity
+ com.example.myapplication.HomeActivity$1
+com/example/myapplication/User.java
+ com.example.myapplication.User
+ com.example.myapplication.User$1
+com/example/myapplication/databinding/ActivityHomeBinding.java
+ com.example.myapplication.databinding.ActivityHomeBinding

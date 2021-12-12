@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
     private SoundPool sp;
     Intent intent;
     boolean isRecording = false;
-    private long second = 0;
-    Map<Long, String> record = new HashMap<>();
+    private String second = "";
+    Map<String, String> record = new HashMap<>();
     private int sound1,sound2,sound3,sound4,sound5,sound6,sound7,sound8,sound9,sound10,sound11,sound12;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTick(long millisUntilFinished) {
                 binding.timer.setText(millisUntilFinished + "");
-                second = millisUntilFinished;
+                second = millisUntilFinished + "";
             }
 
             @Override
@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     isRecording = false;
                     timer.cancel();
+                    System.out.println(record.toString());
                 }
             }
         });
@@ -85,9 +86,9 @@ public class MainActivity extends AppCompatActivity {
         {
             @Override
             public void onTick(long millisUntilFinished) {
-                if(record.get(millisUntilFinished) != null)
+                if(record.get(millisUntilFinished + "") != null)
                 {
-                    switch(record.get(millisUntilFinished))
+                    switch(record.get(millisUntilFinished + ""))
                     {
                         case "00":
                             sp.play(sound1,1.0f,1.0f,0,0,10f);

@@ -12,6 +12,10 @@
         "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_player_song.xml"
     },
     {
+        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\custom_listview.xml",
+        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\custom_listview.xml"
+    },
+    {
         "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_comment.xml",
         "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_comment.xml"
     },
