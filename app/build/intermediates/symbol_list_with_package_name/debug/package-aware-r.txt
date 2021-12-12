@@ -2190,7 +2190,6 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
-id timer
 id title
 id titleDividerNoCustom
 id title_template
@@ -2412,6 +2411,16 @@ raw key12
 raw kick
 raw ride
 raw snare
+raw sound00
+raw sound1
+raw sound2
+raw sound3
+raw sound4
+raw sound5
+raw sound6
+raw sound7
+raw sound8
+raw sound9
 raw tom1
 raw tom2
 raw tom3

@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         {
             @Override
             public void onTick(long millisUntilFinished) {
-                binding.timer.setText(millisUntilFinished + "");
                 second = millisUntilFinished + "";
             }
 

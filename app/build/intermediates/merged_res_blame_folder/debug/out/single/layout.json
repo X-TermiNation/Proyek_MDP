@@ -1,38 +1,38 @@
 [
     {
-        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
-        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_register.xml"
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_comment.xml",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_comment.xml"
     },
     {
-        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_music.xml",
-        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\layout_music.xml"
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\custom_listview.xml",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\layout\\custom_listview.xml"
     },
     {
-        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_player_song.xml",
-        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_player_song.xml"
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_music.xml",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\layout\\layout_music.xml"
     },
     {
-        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\custom_listview.xml",
-        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\custom_listview.xml"
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_comment.xml",
-        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_comment.xml"
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
-        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_home.xml",
-        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_home.xml"
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
-        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\fragment_home.xml"
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_player_song.xml",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_player_song.xml"
     },
     {
-        "merged": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_home.xml",
+        "source": "E:\\Github data\\Proyek_MDP\\app\\src\\main\\res\\layout\\activity_home.xml"
     }
 ]

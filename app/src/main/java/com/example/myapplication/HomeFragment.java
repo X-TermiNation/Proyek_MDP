@@ -40,7 +40,6 @@ public class HomeFragment extends Fragment {
     private String status;
     private String email;
 
-
     private musicAdapter musicAdapter;
     private FragmentHomeBinding binding;
     private int sound1,sound2,sound3,sound4,sound5,sound6,sound7,sound8,sound9,sound10,sound11,sound12;
@@ -98,8 +97,21 @@ public class HomeFragment extends Fragment {
         sound11 = R.raw.key01;
         sound12 = R.raw.key02;
         listmusic.add(new music("Drum",sound1,sound2,sound3,sound4,sound5,sound6,sound7,sound8,sound9,sound10,sound11,sound12));
-        return binding.getRoot();
 
+        sound1 = R.raw.sound00;
+        sound2 = R.raw.sound1;
+        sound3 = R.raw.sound2;
+        sound4 = R.raw.sound3;
+        sound5 = R.raw.sound4;
+        sound6 = R.raw.sound5;
+        sound7 = R.raw.sound6;
+        sound8 = R.raw.sound7;
+        sound9 = R.raw.sound8;
+        sound10 = R.raw.sound9;
+        sound11 = R.raw.sound1;
+        sound12 = R.raw.sound2;
+        listmusic.add(new music("DJ",sound1,sound2,sound3,sound4,sound5,sound6,sound7,sound8,sound9,sound10,sound11,sound12));
+        return binding.getRoot();
     }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -122,9 +134,6 @@ public class HomeFragment extends Fragment {
     void setUpRecyclerView(){
         binding.rvmusicHome.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.rvmusicHome.setHasFixedSize(true);
-
-
-
         musicAdapter=new musicAdapter(listmusic, email);
         binding.rvmusicHome.setAdapter(musicAdapter);
     }

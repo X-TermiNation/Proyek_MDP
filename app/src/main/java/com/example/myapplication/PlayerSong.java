@@ -88,7 +88,22 @@ public class PlayerSong extends AppCompatActivity {
             sound11 = R.raw.key01;
             sound12 = R.raw.key02;
             curInstrument = new music("Drum",sound1,sound2,sound3,sound4,sound5,sound6,sound7,sound8,sound9,sound10,sound11,sound12);
-
+        }
+        else if(instrument.equals("DJ"))
+        {
+            sound1 = R.raw.sound00;
+            sound2 = R.raw.sound1;
+            sound3 = R.raw.sound2;
+            sound4 = R.raw.sound3;
+            sound5 = R.raw.sound4;
+            sound6 = R.raw.sound5;
+            sound7 = R.raw.sound6;
+            sound8 = R.raw.sound7;
+            sound9 = R.raw.sound8;
+            sound10 = R.raw.sound9;
+            sound11 = R.raw.sound1;
+            sound12 = R.raw.sound2;
+            curInstrument = new music("DJ",sound1,sound2,sound3,sound4,sound5,sound6,sound7,sound8,sound9,sound10,sound11,sound12);
         }
 
         bind.back.setOnClickListener(new View.OnClickListener() {

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\JohnCS\\Documents\\GitHub\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+            "outputFile": "E:\\Github data\\Proyek_MDP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\JohnCS\\.gradle\\caches\\transforms-3\\f3cd7d7f942c7de297993c153ffbaf56\\transformed\\appcompat-1.2.0\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\User1\\.gradle\\caches\\transforms-3\\f3cd7d7f942c7de297993c153ffbaf56\\transformed\\appcompat-1.2.0\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
